@@ -22,68 +22,200 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
     }
-    main{
+    section{
       background-color: var(--white);
       display: flex;
-      width: 600px;
-      height: 450px;
+      width: 750px;
+      height: 525px;
       border-radius: 15px;
       overflow: hidden;
     }
 
-    main div.image{
-      width: 300px;
+    section div.image{
+      width: 375px;
+      background-image: url(images/image-product-desktop.jpg);
+      background-size: cover;
+      background-position: 100%;
     }
 
-    main div.image img{
+    section div.image img{
       height: 100%;
-      width: 300px;
+      width: 375px;
+      visibility: hidden;
     }
 
-    main div.content{
-      padding: 35px 30px;
+    section div.content{
+      padding: 35px 40px;
     }
 
-    main div.content span.type{
+    section div.content span.type{
       text-transform: uppercase;
       letter-spacing: 5px;
-      font-family: "Montserrat", sans-serif;
       font-weight: 500;
+      font-size: 1.1em;
       color: var(--grayish-blue);
     }
 
-    main div.content h1.product-title{
+    section div.content h1.product-title{
       font-family: "Fraunces", sans-serif;
       font-weight: 900;
-      font-size: 35px;
-      line-height: 32px;
-      color: var(--dark-blue)
+      font-size: 2.9em;
+      line-height: 38px;
+      color: var(--dark-blue);
+      margin: 25px 0;
     }
 
-    main div.content p.description{
+    section div.content p.description{
       color: var(--grayish-blue);
-      font-family: "Montserrat", sans-serif;
-      font-size: 15px;
-      line-height: 23px;  
+      font-size: 1.2em;
+      line-height: 25px;
+      margin-bottom: 0;  
+    }
+
+    section div.content div.prices{
+      display: flex;
+      align-items: center;
+      color: var(--primary-color-1);
+      font-size: 2.9em;
+      font-family: "Fraunces", sans-serif;
+      margin: 25px 0 30px;
+    }
+
+    section div.content div.prices span{
+      color: var(--grayish-blue);
+      font-size: 1rem;
+      display: block;
+      margin-left: 25px;
+      text-decoration: line-through;
+    }
+
+    section div.content button.buy{
+      box-sizing: border-box;
+      width: 100%;
+      padding: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--primary-color-1);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1em;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    section div.content button.buy:active{
+      background-color: hsl(159, 42%, 20%);
+    }
+
+    section div.content button.buy svg{
+      margin-right: 10px;
+    }
+    @media (max-width: 800px){
+      body{
+        font-size: 11px;
+      }
+      section{
+        width: 550px;
+        height: 375px;
+      }
+
+      section div.image{
+        width: 275px;
+      }
+
+      /* section div.content{
+        width: 275px;
+      } */
+
+      section div.content{
+        padding: 20px;
+      }
+
+      section div.content h1.product-title{
+        line-height: 30px;
+        margin: 15px 0;
+      }
+
+      section div.content p.description{
+        line-height: 22px;
+      }
+
+      section div.content div.prices{
+        margin: 15px 0; 
+      }
+
+      section div.content button.buy{
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 530px){
+      body{
+        font-size: 11px;
+      }
+      section{
+        flex-direction: column;
+        width: 95%;
+        height: 600px;
+        margin: 10px;
+      }
+
+      section div.image{
+        height: 40%;
+        width: 100%;
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: 100% 100%;
+      }
+
+      section div.content{
+        padding: 25px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      section div.content h1.product-title{
+        margin: 15px 0;
+        line-height: 28px;
+      }
+      section div.content div.prices{
+        margin: 5vw 0; 
+      }
+
+      section div.content button.buy{
+        padding: 15px;
+        box-sizing: border-box;
+        width: 100%;
+      }
+
     }
   </style>
 </head>
 <body>
- 
-  <main>
+
+  <section>
+
     <div class="image">
       <img src="images/image-product-desktop.jpg" alt="image: perfume">
     </div>
+
     <div class="content">
       <span class="type">perfume</span>
       <h1 class="product-title">Gabrielle Essence Eau De Parfum</h1>
       <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
         Perfumer-Creator for the House of CHANEL.</p>
       <div class="prices">$149.99 <span>$169.99</span></div>
-      <button class="buy"><img src="" alt="">Add to Cart</button>
+      <button class="buy">
+        <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg>
+        Add to Cart</button>
+      
     </div>
-  </main>
+    
+  </section>
 
 </body>
 </html>
