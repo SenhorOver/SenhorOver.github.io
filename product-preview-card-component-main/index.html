@@ -2,35 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Product preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+    :root{
+      --primary-color-1: hsl(158, 36%, 37%);
+      --primary-color-2: hsl(30, 38%, 92%);
+      --white: hsl(0, 0%, 100%);
+      --grayish-blue: hsl(228, 12%, 48%);
+      --dark-blue: hsl(212, 21%, 14%);
+    }
+    body{
+      background-color: var(--primary-color-2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    main{
+      background-color: var(--white);
+      display: flex;
+      width: 600px;
+      height: 450px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    main div.image{
+      width: 300px;
+    }
+
+    main div.image img{
+      height: 100%;
+      width: 300px;
+    }
+
+    main div.content{
+      padding: 35px 30px;
+    }
+
+    main div.content span.type{
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      color: var(--grayish-blue);
+    }
+
+    main div.content h1.product-title{
+      font-family: "Fraunces", sans-serif;
+      font-weight: 900;
+      font-size: 35px;
+      line-height: 32px;
+      color: var(--dark-blue)
+    }
+
+    main div.content p.description{
+      color: var(--grayish-blue);
+      font-family: "Montserrat", sans-serif;
+      font-size: 15px;
+      line-height: 23px;  
+    }
   </style>
 </head>
 <body>
+ 
+  <main>
+    <div class="image">
+      <img src="images/image-product-desktop.jpg" alt="image: perfume">
+    </div>
+    <div class="content">
+      <span class="type">perfume</span>
+      <h1 class="product-title">Gabrielle Essence Eau De Parfum</h1>
+      <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.</p>
+      <div class="prices">$149.99 <span>$169.99</span></div>
+      <button class="buy"><img src="" alt="">Add to Cart</button>
+    </div>
+  </main>
 
-  Preview
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
