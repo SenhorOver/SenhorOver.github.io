@@ -48,7 +48,7 @@ Users should be able to:
 
 ### Continued development
 
-- I tried to do a responsive layout for this design, but I don't know yet a good pratice for it, I did what I know, whit my current
+- I tried to do a responsive layout for this design, but I don't know yet a good pratice for it, I did what I know, with my current
   knowledge, but I think I still need to do way more projects, and bigger projects to train my code for responsive designs
 - When I was coding, I didn't used the relative unit 'em', but I remember that would be good to use, because I needed to change only the
   font-size of body, instead of changing every font-size, but I could add this unit in line-height too, but I forgot
