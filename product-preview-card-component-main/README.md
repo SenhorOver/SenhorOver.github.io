@@ -20,7 +20,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ## Overview
 
-- I tried to write all my comments in english, but I'm Brazilian, so, if there is any mistake I fell sorry, I didn't checked in any Translate app
+- I tried to write all my comments in english, but I'm Brazilian, so, if there is any mistake I feel sorry, I didn't checked in any Translate app
 
 ### The challenge
 
