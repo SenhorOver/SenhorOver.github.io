@@ -158,5 +158,12 @@ section.container div.creator a:hover {
   }
   section.container a.img {
     height: 350px;
+    margin-bottom: 25px;
+  }
+  section.container div.content div.time-price {
+    margin: 25px 0;
+  }
+  section.container div.creator {
+    margin-bottom: 5px;
   }
 }/*# sourceMappingURL=style.css.map */
