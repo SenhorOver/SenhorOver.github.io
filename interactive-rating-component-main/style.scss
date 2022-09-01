@@ -81,6 +81,7 @@ section.container{
             border-radius: 50%;
             font-size: 1.1em;
             cursor: pointer;
+            user-select: none;
             transition: color 200ms ease;
             transition: background-color 200ms ease;
 
@@ -123,14 +124,14 @@ section.container{
     div.img{
         text-align: center;
         padding-top: 15px;
-        padding-bottom: 15px;
+        padding-bottom: 30px;
     }
 
     div.selectedScore{
         color: var(--Orange);
         background-color: hsla(216, 12%, 54%, 0.13);
-        width: 50%;
-        padding: 5px;
+        width: 55%;
+        padding: 8px 8px 5px;
         margin: auto;
         display: flex;
         align-items: center;
@@ -138,25 +139,53 @@ section.container{
         border-radius: 15px;
     }
 
+    div.thankyou{
+        text-align: center;
+        margin-top: 35px;
+
+        p.text{
+            font-size: 1.07em;
+        }
+    }
 
 
+    &.none{
+        display:none;
+    }
 }
-
-
-
-
-
-
-
-
-
 
 .attribution { 
     font-size: 11px; text-align: center; 
-    position: fixed;
+    position: absolute;
     bottom: 15px;
     a { 
     color: var(--Orange);
     text-decoration: none;
+    }
+}
+
+@media (max-width: 450px){
+    body{
+        font-size: 13.5px;
+    }
+    section.container{
+        width: 350px;
+        height: 400px;
+        padding: 25px;
+        border-radius: 15px;
+
+        div.icon{
+            width: 45px;
+            height: 45px;
+            margin-bottom: 25px;
+        }
+
+        div.buttons{
+            margin-bottom: 35px;
+            button.score{
+                width: 45px;
+                height: 45px;
+            }
+        }
     }
 }
