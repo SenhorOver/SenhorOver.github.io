@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --dark-blue-bg: hsl(217, 54%, 11%); /*(main BG)*/
+    --dark-blue-card: hsl(216, 50%, 16%); /*(card BG)*/
+    --dark-blue-line: hsl(215, 32%, 27%); /*(line)*/
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: var(--dark-blue-bg);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+section.container{
+    width: 350px;
+    background-color: var(--dark-blue-card);
+    padding: 25px;
+    border-radius: 20px;
+
+    
+    a.img{
+        display: block;
+        position: relative;
+        height: 300px;
+
+        img{
+            width: 100%;
+            border-radius: 10px;
+            
+        }
+
+        div.cover{
+            position: absolute;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: hsla(178, 100%, 50%, 0);
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            transition: background-color 300ms ease;
+
+            svg{
+                opacity: 0;
+                transition: opacity 200ms ease;
+            }
+        }
+        
+        
+        &:hover div.cover{
+            background-color: hsla(178, 100%, 50%, 0.5);
+        }
+
+        &:hover div.cover svg{
+            opacity: 1;
+        }
+    }
+
+    div.content{
+        margin-top: 20px;
+        border-bottom: 1px solid var(--dark-blue-line);
+
+        h2.title{
+            font-weight: 600;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+
+            a{
+                color: var(--white);
+                text-decoration: none;
+                transition: color 300ms ease;
+
+                &:hover{
+                    color: var(--cyan);
+                }
+            }
+        }
+
+        p.text{
+            font-weight: 100;
+            color: var(--soft-blue);
+            line-height: 1.5em;
+            font-size: 0.9em;
+            margin-bottom: 16px;
+        }
+
+        div.time-price{
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+
+            div.eth{
+                color: var(--cyan);
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+
+                svg{
+                    margin-right: 7px;
+                }
+            }
+
+            div.time{
+                color: var(--soft-blue);
+                display: flex;
+                align-items: center;
+
+                svg{
+                    margin-right: 7px;
+                }
+            }
+
+        }
+    }
+
+    div.creator{
+        display: flex;
+        align-items: center;
+        font-weight: 100;
+        font-size: 0.9em;
+        color: var(--soft-blue);
+        margin-top: 20px;
+
+        img{
+            height: 35px;
+            width: 35px;
+            outline: 1px solid var(--white);
+            border-radius: 50%;
+            margin: 0 15px 0 0;
+        }
+
+        a{
+            text-decoration: none;
+            color: var(--white);
+            transition: color 300ms ease;
+
+            &:hover{
+                color: var(--cyan);
+            }
+        }
+    }
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    color: var(--soft-blue);
+
+     a { 
+        color: hsl(228, 45%, 44%); 
+        text-decoration: none;
+        color: var(--white);
+
+        &:hover{
+            color: var(--cyan)
+        }
+    }
+}
+
+
+@media (min-width: 1000px){
+    body{
+        font-size: 21px;
+    }
+
+    section.container{
+        width: 400px;  
+
+        a.img {
+            height: 350px;
+        }
+    }
+}
