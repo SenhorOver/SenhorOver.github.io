@@ -32,9 +32,9 @@ section.container {
   border-radius: 20px;
 }
 section.container a.img {
-  display: block;
+  display: inline-block;
   position: relative;
-  height: 300px;
+  width: 100%;
 }
 section.container a.img img {
   width: 100%;
@@ -48,7 +48,7 @@ section.container a.img div.cover {
   justify-content: center;
   background-color: hsla(178deg, 100%, 50%, 0);
   width: 100%;
-  height: 100%;
+  height: 98%;
   border-radius: 10px;
   transition: background-color 300ms ease;
 }
@@ -63,7 +63,7 @@ section.container a.img:hover div.cover svg {
   opacity: 1;
 }
 section.container div.content {
-  margin-top: 20px;
+  margin-top: 10px;
   border-bottom: 1px solid var(--dark-blue-line);
 }
 section.container div.content h2.title {
@@ -157,13 +157,23 @@ section.container div.creator a:hover {
     width: 400px;
   }
   section.container a.img {
-    height: 350px;
     margin-bottom: 25px;
+  }
+  section.container a.img div.cover {
+    height: 99%;
   }
   section.container div.content div.time-price {
     margin: 25px 0;
   }
   section.container div.creator {
     margin-bottom: 5px;
+  }
+}
+@media (max-width: 325px) {
+  section.container div.content div.time-price {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */

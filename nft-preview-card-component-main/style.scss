@@ -34,9 +34,9 @@ section.container{
 
     
     a.img{
-        display: block;
+        display: inline-block;
         position: relative;
-        height: 300px;
+        width: 100%;
 
         img{
             width: 100%;
@@ -52,7 +52,7 @@ section.container{
             justify-content: center;
             background-color: hsla(178, 100%, 50%, 0);
             width: 100%;
-            height: 100%;
+            height: 98%;
             border-radius: 10px;
             transition: background-color 300ms ease;
 
@@ -73,7 +73,7 @@ section.container{
     }
 
     div.content{
-        margin-top: 20px;
+        margin-top: 10px;
         border-bottom: 1px solid var(--dark-blue-line);
 
         h2.title{
@@ -187,8 +187,11 @@ section.container{
         width: 400px;  
 
         a.img {
-            height: 350px;
             margin-bottom: 25px;
+
+            div.cover{
+                height: 99%;
+            }
         }
 
         div.content{
@@ -201,5 +204,21 @@ section.container{
         div.creator{
             margin-bottom: 5px;
         }
+    }
+}
+
+@media (max-width: 325px) { //Código sugerido por @correlucas
+
+    section.container {
+
+        div.content {
+
+            div.time-price {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: center;
+            }
+        } 
     }
 }

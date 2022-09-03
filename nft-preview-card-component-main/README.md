@@ -17,6 +17,7 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -60,3 +61,7 @@ Users should be able to:
 
 - Website - [Marcos Vinicius Silva](https://github.com/SenhorOver)
 - Frontend Mentor - [@SenhorOver](https://www.frontendmentor.io/profile/SenhorOver)
+
+## Acknowledgments
+
+- [Lucas](https://www.frontendmentor.io/profile/correlucas) commented in my solution and warned me about this design in extremelly small width, so I implemented his tip in my code, and fixed other issues.
