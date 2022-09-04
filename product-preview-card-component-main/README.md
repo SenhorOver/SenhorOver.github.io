@@ -17,6 +17,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -31,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/SenhorOver/SenhorOver.github.io/tree/master/product-preview-card-component-main)
-- Live Site URL: (https://senhorover.github.io/product-preview-card-component-main/index.html)
+- Solution URL: [https://github.com/SenhorOver/SenhorOver.github.io/tree/master/product-preview-card-component-main](https://github.com/SenhorOver/SenhorOver.github.io/tree/master/product-preview-card-component-main)
+- Live Site URL: [https://senhorover.github.io/product-preview-card-component-main/index.html](https://senhorover.github.io/product-preview-card-component-main/index.html)
 
 ## My process
 
@@ -44,14 +45,12 @@ Users should be able to:
 
 ### What I learned
 
-- This project was my first project in this website, but I didn't learned nothing new, I need to do more difficult and bigger projects
+- The picture tag, it's a really important tag for this design
 
 ### Continued development
 
-- I tried to do a responsive layout for this design, but I don't know yet a good pratice for it, I did what I know, with my current
-  knowledge, but I think I still need to do way more projects, and bigger projects to train my code for responsive designs
-- When I was coding, I didn't used the relative unit 'em', but I remember that would be good to use, because I needed to change only the
-  font-size of body, instead of changing every font-size, but I could add this unit in line-height too, but I forgot
+- I tried to do a responsive layout for this design, but I don't know yet a good pratice for it, I did what I know, with my current knowledge, but I think I still need to do way more projects, and bigger projects to train my code for responsive designs
+- When I was coding, I didn't used the relative unit 'em', but I remember that would be good to use, because I needed to change only the font-size of body, instead of changing every font-size, but I could add this unit in line-height too, but I forgot
 
 ### Useful resources
 
@@ -61,3 +60,7 @@ Users should be able to:
 
 - Github - [Marcos Vinicius Silva](https://github.com/SenhorOver)
 - Frontend Mentor - [@SenhorOver](https://www.frontendmentor.io/profile/SenhorOver) 
+
+## Acknowledgments
+
+- [Lucas](https://www.frontendmentor.io/profile/correlucas) commented in my solution and warned me about few things, one of them was about a tag I didn't knew, the picture tag.

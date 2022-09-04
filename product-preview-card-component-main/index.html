@@ -36,23 +36,18 @@
 
     section div.image{
       width: 375px;
-      background-image: url(images/image-product-desktop.jpg);
-      background-size: cover;
-      background-position: 100%;
       box-sizing: border-box;
     }
 
-    section div.image div{
-      height: 100%;
+    section div.image picture img{
       width: 375px;
-      visibility: hidden;
     }
 
-    section div.content{
+    section main.content{
       padding: 35px 40px;
     }
 
-    section div.content span.type{
+    section main.content span.type{
       text-transform: uppercase;
       letter-spacing: 5px;
       font-weight: 500;
@@ -60,7 +55,7 @@
       color: var(--grayish-blue);
     }
 
-    section div.content h1.product-title{
+    section main.content h1.product-title{
       font-family: "Fraunces", sans-serif;
       font-weight: 900;
       font-size: 2.9em;
@@ -69,14 +64,14 @@
       margin: 25px 0;
     }
 
-    section div.content p.description{
+    section main.content p.description{
       color: var(--grayish-blue);
       font-size: 1.2em;
       line-height: 25px;
       margin-bottom: 0;  
     }
 
-    section div.content div.prices{
+    section main.content div.prices{
       display: flex;
       align-items: center;
       color: var(--primary-color-1);
@@ -85,7 +80,7 @@
       margin: 25px 0 30px;
     }
 
-    section div.content div.prices span{
+    section main.content div.prices span{
       color: var(--grayish-blue);
       font-size: 1rem;
       display: block;
@@ -93,7 +88,7 @@
       text-decoration: line-through;
     }
 
-    section div.content button.buy{
+    section main.content button.buy{
       box-sizing: border-box;
       width: 100%;
       padding: 18px;
@@ -109,11 +104,11 @@
       cursor: pointer;
     }
 
-    section div.content button.buy:active{
+    section main.content button.buy:active{
       background-color: hsl(159, 42%, 20%);
     }
 
-    section div.content button.buy svg{
+    section main.content button.buy svg{
       margin-right: 10px;
     }
     @media (max-width: 800px){
@@ -128,28 +123,28 @@
       section div.image{
         width: 275px;
       }
-      section div.image div{
+      section div.image picture img{
         width: 275px;
       }
 
-      section div.content{
+      section main.content{
         padding: 20px;
       }
 
-      section div.content h1.product-title{
+      section main.content h1.product-title{
         line-height: 30px;
         margin: 15px 0;
       }
 
-      section div.content p.description{
+      section main.content p.description{
         line-height: 22px;
       }
 
-      section div.content div.prices{
+      section main.content div.prices{
         margin: 15px 0; 
       }
 
-      section div.content button.buy{
+      section main.content button.buy{
         padding: 15px;
       }
     }
@@ -161,35 +156,33 @@
       section{
         flex-direction: column;
         width: 95%;
-        height: 600px;
+        height: auto;
         margin: 10px;
       }
 
       section div.image{
-        height: 40%;
         width: 100%;
-        background-image: url(images/image-product-mobile.jpg);
-        background-size: 100% 100%;
       }
-      section div.image div{
+      section div.image picture img{
         width: 100%;
+        height: 100%;
       }
 
-      section div.content{
+      section main.content{
         padding: 25px;
         width: 100%;
         box-sizing: border-box;
       }
 
-      section div.content h1.product-title{
+      section main.content h1.product-title{
         margin: 15px 0;
         line-height: 28px;
       }
-      section div.content div.prices{
+      section main.content div.prices{
         margin: 5vw 0; 
       }
 
-      section div.content button.buy{
+      section main.content button.buy{
         padding: 15px;
         box-sizing: border-box;
         width: 100%;
@@ -203,10 +196,13 @@
   <section>
 
     <div class="image">
-      <div></div>
+      <picture>
+        <source media="(min-width:530px)" srcset="images/image-product-desktop.jpg">
+        <img src="images/image-product-mobile.jpg" alt="Perfume">
+      </picture>
     </div>
 
-    <div class="content">
+    <main class="content">
       <span class="type">perfume</span>
       <h1 class="product-title">Gabrielle Essence Eau De Parfum</h1>
       <p class="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
@@ -215,8 +211,7 @@
       <button class="buy">
         <svg width="15" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg>
         Add to Cart</button>
-      
-    </div>
+    </main>
     
   </section>
 
