@@ -23,6 +23,17 @@
           <li><a href="#">Projects</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
+
+        <svg id="menu" width="24" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd"/></svg>
+      </nav>
+
+      <nav class="mobile-menu">
+        <ul class="menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
       </nav>
     </header>
     <div class="top-center-itens">
@@ -45,16 +56,22 @@
               We are a full-service creative agency specializing in helping brands grow fast. 
               Engage your clients through compelling visuals that do most of the marketing for you.          
             </p>
-            <p class="anchor">
-              <a class="lm1" href="#">LEARN MORE</a>
+            <p class="anchor">    
+                <a class="lm1" href="#">LEARN MORE</a>
             </p>
 
           </div>
         </div>
-        <img src="images/desktop/image-transform.jpg" alt="">
+        <picture>
+          <source media="(max-width: 750px)" srcset="images/mobile/image-transform.jpg">
+          <img src="images/desktop/image-transform.jpg" alt="">
+        </picture>
       </article>
       <article class="second-article">
-        <img src="images/desktop/image-stand-out.jpg" alt="">
+        <picture>
+          <source media="(max-width: 750px)" srcset="images/mobile/image-stand-out.jpg">
+          <img src="images/desktop/image-stand-out.jpg" alt="">
+        </picture>
         <div class="content-cover">
           <div class="content">
             <h3 class="title">
@@ -72,7 +89,10 @@
 
   <section class="information">
       <div class="content-cover">
-        <img src="images/desktop/image-graphic-design.jpg" alt="">
+        <picture>
+          <source media="(max-width: 750px)" srcset="images/mobile/image-graphic-design.jpg">
+          <img src="images/desktop/image-graphic-design.jpg" alt="">
+        </picture>
         <div class="content">
           <div class="center">
             <h4 class="title green">
@@ -86,7 +106,10 @@
       </div>
 
       <div class="content-cover">
-        <img src="images/desktop/image-photography.jpg" alt="">
+        <picture>
+          <source media="(max-width: 750px )" srcset="images/mobile/image-photography.jpg">
+          <img src="images/desktop/image-photography.jpg" alt="">
+        </picture>
         <div class="content">
           <div class="center">
             <h4 class="title blue">
@@ -106,14 +129,26 @@
       <div class="clients-testimonials">
         <img src="images/image-emily.jpg" alt="">
         <p class="text">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+        <div>
+          <h5 class="name">Emily R.</h5>
+          <span> Marketing Director</span>
+        </div>
       </div>
       <div class="clients-testimonials">
         <img src="images/image-thomas.jpg" alt="">
         <p class="text">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>    
+        <div>
+          <h5 class="name">Thomas S.</h5>
+          <span>Chief Operating Officer</span>
+        </div>
       </div>
       <div class="clients-testimonials">
         <img src="images/image-jennie.jpg" alt="">
         <p class="text">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+        <div>
+          <h5 class="name">Jennie F.</h5>
+          <span>Business Owner</span>
+        </div>
       </div>
     </div>
 
@@ -134,10 +169,26 @@
   </section>
 
   <section class="gallery">
-    <img src="images/desktop/image-gallery-milkbottles.jpg" alt="">
-    <img src="images/desktop/image-gallery-orange.jpg" alt="">
-    <img src="images/desktop/image-gallery-cone.jpg" alt="">
-    <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="">
+    <div>
+      <picture>
+        <source media="(max-width: 750px)" srcset="images/mobile/image-gallery-milkbottles.jpg">
+        <img src="images/desktop/image-gallery-milkbottles.jpg" alt="">
+      </picture>
+      <picture>
+        <source media="(max-width: 750px)" srcset="images/mobile/image-gallery-orange.jpg">
+        <img src="images/desktop/image-gallery-orange.jpg" alt="">
+      </picture>
+    </div>
+    <div>
+      <picture>
+        <source media="(max-width: 750px)" srcset="images/mobile/image-gallery-cone.jpg">
+        <img src="images/desktop/image-gallery-cone.jpg" alt="">
+      </picture>
+      <picture>
+        <source media="(max-width: 750px)" srcset="images/mobile/image-gallery-sugar-cubes.jpg">
+        <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="">
+      </picture>
+    </div>
   </section>
 
     
@@ -164,5 +215,6 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

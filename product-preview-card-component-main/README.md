@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/SenhorOver/SenhorOver.github.io/tree/master/product-preview-card-component-main](https://github.com/SenhorOver/SenhorOver.github.io/tree/master/product-preview-card-component-main)
+- Solution URL: [https://www.frontendmentor.io/solutions/product-preview-card-component-n0EckqxoZZ](https://www.frontendmentor.io/solutions/product-preview-card-component-n0EckqxoZZn)
 - Live Site URL: [https://senhorover.github.io/product-preview-card-component-main/index.html](https://senhorover.github.io/product-preview-card-component-main/index.html)
 
 ## My process

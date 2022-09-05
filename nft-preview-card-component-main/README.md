@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/SenhorOver/SenhorOver.github.io/tree/master/nft-preview-card-component-main](https://github.com/SenhorOver/SenhorOver.github.io/tree/master/nft-preview-card-component-main)
+- Solution URL: [https://www.frontendmentor.io/solutions/nft-preview-card-component-with-html-and-scss-Zivmt8Vjxh](https://www.frontendmentor.io/solutions/nft-preview-card-component-with-html-and-scss-Zivmt8Vjxh)
 - Live Site URL: [https://senhorover.github.io/nft-preview-card-component-main/index.html](https://senhorover.github.io/nft-preview-card-component-main/index.html)
 
 ## My process

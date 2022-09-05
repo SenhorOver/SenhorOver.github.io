@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/SenhorOver/SenhorOver.github.io/tree/master/interactive-rating-component-main](https://github.com/SenhorOver/SenhorOver.github.io/tree/master/interactive-rating-component-main)
+- Solution URL: [https://www.frontendmentor.io/solutions/interactive-rating-component-with-html-scss-and-js-X_xR3cBXpz](https://www.frontendmentor.io/solutions/interactive-rating-component-with-html-scss-and-js-X_xR3cBXpz)
 - Live Site URL: [https://senhorover.github.io/interactive-rating-component-main/index.html](https://senhorover.github.io/interactive-rating-component-main/index.html)
 
 ## My process
