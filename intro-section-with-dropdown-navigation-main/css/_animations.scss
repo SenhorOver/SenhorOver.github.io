@@ -1,0 +1,55 @@
+
+//Menu
+@keyframes OpenMenu{
+    0%{
+        right: -65vw;
+    }
+
+    50%{
+        right: -35vw;
+    }
+
+    100%{
+        right: 0;
+    }
+}
+
+@keyframes CloseMenu{
+    0%{
+        right: 0;
+    }
+
+    50%{
+        right: -35vw;
+    }
+
+    100%{
+        right: -65vw;
+    }
+}
+
+//Transparent-bg
+
+@keyframes OpenMenuBg{
+    from{
+        left: -100vw;
+        opacity: 0;
+    }
+
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes CloseMenuBg{
+    from{
+        left: 0;
+        opacity: 1;
+    }
+
+    to{
+        left: -100vw;
+        opacity: 0;
+    }
+}

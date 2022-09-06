@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+@import 'animations';
 
 :root {
   --almost-white: hsl(0, 0%, 98%);
@@ -21,6 +22,10 @@ body {
   padding: 20px;
 }
 
+.none{
+  display: none;
+}
+
 section.page {
   max-width: 100vw;
 
@@ -40,8 +45,16 @@ section.page {
         background-color: white;
         width: 65vw;
         height: 100vh;
-        right: 0;
+        right: -65vw;
         top: 0;
+
+        &.open{
+          animation: OpenMenu 300ms linear 0ms 1 normal forwards;
+        }
+
+        &.removed{
+          animation: CloseMenu 300ms linear 0ms 1 normal forwards;
+        }
 
         div.container {
 
@@ -57,14 +70,12 @@ section.page {
               cursor: pointer;
               color: var(--medium-gray);
               padding: 10px 0;
+              -webkit-tap-highlight-color: transparent;
+              
 
               svg {
                 margin-left: 10px;
                 transition: rotate 200ms ease;
-              }
-
-              svg.a {
-                transform: rotate(180deg);
               }
 
               a {
@@ -72,6 +83,9 @@ section.page {
                 color: var(--medium-gray);
                 text-decoration: none;
                 padding: 5px 0;
+                &:active{
+                  color: black;
+                }
               }
 
               span {
@@ -79,6 +93,9 @@ section.page {
                 color: var(--medium-gray);
                 text-decoration: none;
                 padding: 5px 0;
+                &:active{
+                  color: black;
+                }
               }
 
               &:first-child, &:nth-child(2){
@@ -93,9 +110,13 @@ section.page {
                     & > a{
                       display: flex;
                       align-items: center;
+                      
                       span{
                         display: inline-block;
                         margin-left: 15px;
+                        &:active{
+                          color: black;
+                        }
                       }
                     }
                   }
@@ -109,22 +130,52 @@ section.page {
                 }
               }
             }
+
+            margin-bottom: 15px;
           }
 
           ul.login {
             list-style: none;
+
+            li{
+              color: var(--medium-gray);
+              text-align: center;
+              padding: 15px;
+              margin: 5px 0;
+
+              &:last-child{
+                border: 2px solid var(--medium-gray);
+                border-radius: 15px;
+              }
+
+              &:active{
+                color: black;
+                border-color: black;
+              }
+            }
+
           }
 
         }
 
-        &::before {
-          content: '';
+        div.transparent-bg{
           background-color: rgba(0, 0, 0, 0.7);
           position: absolute;
-          width: 35vw;
+          width: 36vw;
           height: 100vh;
           transform: translateX(-100%);
-          display: none;
+          opacity: 0;
+          top:0;
+          left: -100vw;
+          
+
+          &.open{
+            animation: OpenMenuBg 300ms linear 0ms 1 normal forwards;
+          }
+
+          &.removed{
+            animation: CloseMenuBg 300ms linear 0ms 1 normal forwards;
+          }
         }
       }
     }
@@ -137,6 +188,42 @@ section.page {
 
       img {
         width: 100%;
+      }
+    }
+
+    div.cover{
+      text-align: center;
+
+      h2.title{
+        color: var(--almost-black);
+        font-size: 2.3em;
+        font-weight: 900;
+        padding: 50px 0 25px;
+      }
+
+      p.text{
+        color: var(--medium-gray);
+        line-height: 1.5em;
+        padding: 0 15px 25px;
+        font-weight: 100;
+      }
+
+      button.lm{
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        background-color: var(--almost-black);
+        color: var(--almost-white);
+        font-size: 1em;
+        font-weight: 500;
+        padding: 15px 25px;
+        margin-bottom: 50px;
+      }
+
+      ul.clients{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
       }
     }
   }
@@ -154,8 +241,13 @@ section.page {
 .attribution {
   font-size: 11px;
   text-align: center;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
 
   a {
-    color: hsl(228, 45%, 44%);
+    color: var(--medium-gray);
+    text-decoration: none;
   }
 }
