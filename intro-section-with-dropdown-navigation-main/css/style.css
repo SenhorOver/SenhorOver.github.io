@@ -83,6 +83,78 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes Girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+@keyframes Girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-180deg);
+  }
+}
+@-webkit-keyframes GirarNormal {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes GirarNormal {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+}
 :root {
   --almost-white: hsl(0, 0%, 98%);
   --medium-gray: hsl(0, 0%, 41%);
@@ -108,6 +180,13 @@ body {
   display: none;
 }
 
+/*
+.dropdown_menu-1
+  for num in (1..5);
+     .dropdown_item-{num}
+       transform-origin: top center;
+       animation: slideDown 300ms (num * 60ms) ease-in-out forwards;
+*/
 section.page {
   max-width: 100vw;
 }
@@ -171,6 +250,17 @@ section.page header.header nav.mobile-bar div.bg div.container ul.menu > li span
 section.page header.header nav.mobile-bar div.bg div.container ul.menu > li span:active {
   color: black;
 }
+section.page header.header nav.mobile-bar div.bg div.container ul.menu > li span:active > svg path {
+  stroke: black;
+}
+section.page header.header nav.mobile-bar div.bg div.container ul.menu > li span.open svg {
+  -webkit-animation: Girar 200ms linear 0ms 1 normal forwards;
+          animation: Girar 200ms linear 0ms 1 normal forwards;
+}
+section.page header.header nav.mobile-bar div.bg div.container ul.menu > li span.removed svg {
+  -webkit-animation: GirarNormal 200ms linear 0ms 1 normal forwards;
+          animation: GirarNormal 200ms linear 0ms 1 normal forwards;
+}
 section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:first-child ul.submenu, section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:nth-child(2) ul.submenu {
   list-style: none;
   padding-left: 15px;
@@ -178,6 +268,7 @@ section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:firs
 }
 section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:first-child ul.submenu li.features, section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:nth-child(2) ul.submenu li.features {
   margin: 5px 0;
+  opacity: 0;
 }
 section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:first-child ul.submenu li.features > a, section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:nth-child(2) ul.submenu li.features > a {
   display: flex;
@@ -189,6 +280,12 @@ section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:firs
 }
 section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:first-child ul.submenu li.features > a span:active, section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:nth-child(2) ul.submenu li.features > a span:active {
   color: black;
+}
+section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:first-child ul.submenu li.features > a svg:active + span, section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:nth-child(2) ul.submenu li.features > a svg:active + span {
+  color: black;
+}
+section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:first-child ul.submenu li.company, section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:nth-child(2) ul.submenu li.company {
+  opacity: 0;
 }
 section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:first-child ul.submenu li.company a, section.page header.header nav.mobile-bar div.bg div.container ul.menu > li:nth-child(2) ul.submenu li.company a {
   display: block;
