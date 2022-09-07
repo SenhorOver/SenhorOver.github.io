@@ -16,6 +16,7 @@
 body {
   font-size: 18px;
   font-family: "Epilogue", sans-serif;
+  background-color: var(--almost-white);
 }
 
 .container {
@@ -255,6 +256,12 @@ section.page {
         display: flex;
         justify-content: space-around;
         padding-bottom: 100px;
+
+        li{
+          svg{
+            transform: scale(0.75)
+          }
+        }
       }
     }
   }
@@ -334,6 +341,49 @@ section.page {
                 margin-left: 8px;
               }
             }
+            
+            &:first-child, &:nth-child(2){
+              position: relative;
+              ul.submenu{
+                display: none;
+                position: absolute;
+                right: 0;
+                list-style: none;
+                z-index: 1;
+                border-radius: 15px;
+                box-shadow: 0 0 35px hsla(0, 0%, 41%, 0.25);
+                background-color: white;
+
+                li{
+                  margin: 5px 0;
+                  svg{
+                    margin-right: 15px;
+                  }
+                  a{
+                    display: flex;
+                    padding: 20px 40px;
+                  }
+
+                  &:hover a{
+                    color: var(--almost-black);
+                  }
+                }
+              }
+            }
+            &:nth-child(2){
+              ul.submenu{
+                left: 0;
+                min-width: 120%;
+              }
+            }
+
+            &:first-child:hover ul, &:nth-child(2):hover ul{
+              display: block;
+            }
+          }
+          & > li:hover > a, & > li:hover > path{
+            color: var(--almost-black);
+            stroke: var(--almost-black);
           }
         }
 
@@ -355,6 +405,11 @@ section.page {
                 border: 2px solid var(--medium-gray);
                 border-radius: 15px;              
               }
+            }
+
+            &:hover a{
+              color: var(--almost-black);
+              border-color: var(--almost-black);
             }
           }
 
@@ -402,6 +457,13 @@ section.page {
 
         button.lm{
           margin-bottom: 100px;
+          cursor: pointer;
+
+          &:hover{
+            outline: 2px solid var(--almost-black);
+            color: var(--almost-black);
+            background-color: var(--almost-white);
+          }
         }
 
         ul.clients{
@@ -446,6 +508,16 @@ section.page {
   section.page{
     main.content-cover{
       padding: 25px 50px;
+
+      div.cover{
+        ul.clients{
+          li{
+            svg{
+              transform: scale(1.2)
+            }
+          }
+        }
+      }
     }
   }
 
@@ -516,5 +588,26 @@ section.page {
   }
 }
 
+@media(max-width: 350px){
+  section.page{
+    main.content-cover{
+      div.cover{
+        ul.clients{
+          width: 100vw;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          li{
+            margin: 8px;
+            svg{
+              width: 75px;
+              transform: scale(0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 

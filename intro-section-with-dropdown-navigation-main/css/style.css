@@ -170,6 +170,7 @@
 body {
   font-size: 18px;
   font-family: "Epilogue", sans-serif;
+  background-color: var(--almost-white);
 }
 
 .container {
@@ -368,6 +369,9 @@ section.page main.content-cover div.cover ul.clients {
   justify-content: space-around;
   padding-bottom: 100px;
 }
+section.page main.content-cover div.cover ul.clients li svg {
+  transform: scale(0.75);
+}
 
 .attribution {
   font-size: 11px;
@@ -429,6 +433,43 @@ section.page main.content-cover div.cover ul.clients {
   section.page header.header nav.menu-bar ul.menu li a svg {
     margin-left: 8px;
   }
+  section.page header.header nav.menu-bar ul.menu li:first-child, section.page header.header nav.menu-bar ul.menu li:nth-child(2) {
+    position: relative;
+  }
+  section.page header.header nav.menu-bar ul.menu li:first-child ul.submenu, section.page header.header nav.menu-bar ul.menu li:nth-child(2) ul.submenu {
+    display: none;
+    position: absolute;
+    right: 0;
+    list-style: none;
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: 0 0 35px hsla(0deg, 0%, 41%, 0.25);
+    background-color: white;
+  }
+  section.page header.header nav.menu-bar ul.menu li:first-child ul.submenu li, section.page header.header nav.menu-bar ul.menu li:nth-child(2) ul.submenu li {
+    margin: 5px 0;
+  }
+  section.page header.header nav.menu-bar ul.menu li:first-child ul.submenu li svg, section.page header.header nav.menu-bar ul.menu li:nth-child(2) ul.submenu li svg {
+    margin-right: 15px;
+  }
+  section.page header.header nav.menu-bar ul.menu li:first-child ul.submenu li a, section.page header.header nav.menu-bar ul.menu li:nth-child(2) ul.submenu li a {
+    display: flex;
+    padding: 20px 40px;
+  }
+  section.page header.header nav.menu-bar ul.menu li:first-child ul.submenu li:hover a, section.page header.header nav.menu-bar ul.menu li:nth-child(2) ul.submenu li:hover a {
+    color: var(--almost-black);
+  }
+  section.page header.header nav.menu-bar ul.menu li:nth-child(2) ul.submenu {
+    left: 0;
+    min-width: 120%;
+  }
+  section.page header.header nav.menu-bar ul.menu li:first-child:hover ul, section.page header.header nav.menu-bar ul.menu li:nth-child(2):hover ul {
+    display: block;
+  }
+  section.page header.header nav.menu-bar ul.menu > li:hover > a, section.page header.header nav.menu-bar ul.menu > li:hover > path {
+    color: var(--almost-black);
+    stroke: var(--almost-black);
+  }
   section.page header.header nav.menu-bar ul.login {
     display: flex;
     list-style: none;
@@ -445,6 +486,10 @@ section.page main.content-cover div.cover ul.clients {
   section.page header.header nav.menu-bar ul.login li:last-child a {
     border: 2px solid var(--medium-gray);
     border-radius: 15px;
+  }
+  section.page header.header nav.menu-bar ul.login li:hover a {
+    color: var(--almost-black);
+    border-color: var(--almost-black);
   }
   section.page header.header nav.mobile-bar {
     display: none;
@@ -482,6 +527,12 @@ section.page main.content-cover div.cover ul.clients {
   }
   section.page main.content-cover div.cover button.lm {
     margin-bottom: 100px;
+    cursor: pointer;
+  }
+  section.page main.content-cover div.cover button.lm:hover {
+    outline: 2px solid var(--almost-black);
+    color: var(--almost-black);
+    background-color: var(--almost-white);
   }
   section.page main.content-cover div.cover ul.clients {
     justify-content: space-between;
@@ -514,6 +565,9 @@ section.page main.content-cover div.cover ul.clients {
   }
   section.page main.content-cover {
     padding: 25px 50px;
+  }
+  section.page main.content-cover div.cover ul.clients li svg {
+    transform: scale(1.2);
   }
 }
 @media (min-width: 1400px) {
@@ -560,5 +614,20 @@ section.page main.content-cover div.cover ul.clients {
   section.page main.content-cover div.cover button.lm {
     margin-top: 50px;
     padding: 20px 30px;
+  }
+}
+@media (max-width: 350px) {
+  section.page main.content-cover div.cover ul.clients {
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  section.page main.content-cover div.cover ul.clients li {
+    margin: 8px;
+  }
+  section.page main.content-cover div.cover ul.clients li svg {
+    width: 75px;
+    transform: scale(0.8);
   }
 }/*# sourceMappingURL=style.css.map */
