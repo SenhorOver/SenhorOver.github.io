@@ -17,6 +17,7 @@ const Main = {
         this.openMenu = document.querySelector('#open-menu')
         this.mobileFeatures = document.querySelector('#features-click')
         this.mobileCompany = document.querySelector('#company-click')
+        this.bodyWidth = document.querySelector('body')
     },
 
     events(){
@@ -24,6 +25,7 @@ const Main = {
         this.openMenu.onclick = this.Events.svgClick_OpenCloseMenu.bind(this)
         this.mobileFeatures.onclick = this.Events.mobileClick_CollapsedExpanded.bind(this)
         this.mobileCompany.onclick = this.Events.mobileClick_CollapsedExpanded.bind(this)
+        this.bodyWidth.onresize = this.Events.resize_widthChange.bind(this)
     },
 
     Events: {
@@ -87,7 +89,19 @@ const Main = {
             } catch(e){}
             
         },
-    }
+
+        resize_widthChange(e){
+            const size = e.target.innerWidth
+            if(size > 900){
+                const bg = document.querySelector('.bg')
+                bg.classList.add('removed')
+                bg.classList.remove('open')
+                setTimeout(function(){
+                    bg.classList.add('none')
+                }, 200)
+            }
+        }
+    },
 }
 
 Main.init()

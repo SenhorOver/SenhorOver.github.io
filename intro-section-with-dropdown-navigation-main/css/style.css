@@ -180,13 +180,6 @@ body {
   display: none;
 }
 
-/*
-.dropdown_menu-1
-  for num in (1..5);
-     .dropdown_item-{num}
-       transform-origin: top center;
-       animation: slideDown 300ms (num * 60ms) ease-in-out forwards;
-*/
 section.page {
   max-width: 100vw;
 }
@@ -197,6 +190,9 @@ section.page header.header {
 }
 section.page header.header nav.menu-bar {
   display: none;
+}
+section.page header.header nav.mobile-bar svg {
+  cursor: pointer;
 }
 section.page header.header nav.mobile-bar div.bg {
   position: absolute;
@@ -217,6 +213,9 @@ section.page header.header nav.mobile-bar div.bg.removed {
 section.page header.header nav.mobile-bar div.bg div.container div {
   text-align: right;
   margin-bottom: 15px;
+}
+section.page header.header nav.mobile-bar div.bg div.container div svg {
+  cursor: pointer;
 }
 section.page header.header nav.mobile-bar div.bg div.container ul.menu {
   list-style: none;
@@ -339,12 +338,12 @@ section.page main.content-cover div.cover h2.title {
   color: var(--almost-black);
   font-size: 2.3em;
   font-weight: 900;
-  padding: 50px 0 25px;
+  padding: 50px 0 30px;
 }
 section.page main.content-cover div.cover p.text {
   color: var(--medium-gray);
   line-height: 1.5em;
-  padding: 0 15px 25px;
+  padding: 0 15px 30px;
   font-weight: 100;
 }
 section.page main.content-cover div.cover button.lm {
@@ -358,16 +357,22 @@ section.page main.content-cover div.cover button.lm {
   padding: 15px 25px;
   margin-bottom: 50px;
 }
+section.page main.content-cover div.cover button.lm:active {
+  background-color: var(--almost-white);
+  color: var(--almost-black);
+  outline: 2px solid var(--almost-black);
+}
 section.page main.content-cover div.cover ul.clients {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  padding-bottom: 100px;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
@@ -375,4 +380,185 @@ section.page main.content-cover div.cover ul.clients {
 .attribution a {
   color: var(--medium-gray);
   text-decoration: none;
+}
+
+@media (min-width: 800px) {
+  section.page header.header nav.mobile-bar div.bg {
+    width: 400px;
+  }
+  section.page header.header nav.mobile-bar div.bg div.transparent-bg {
+    width: 100vw;
+  }
+  section.page main.content-cover div.img {
+    padding: 0 25px;
+  }
+}
+@media (min-width: 900px) {
+  body {
+    height: 100vh;
+    font-size: 14px;
+  }
+  section.page header.header {
+    justify-content: flex-start;
+    padding: 25px 35px;
+    align-items: center;
+  }
+  section.page header.header h1.title {
+    padding-right: 50px;
+  }
+  section.page header.header nav.menu-bar {
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+  }
+  section.page header.header nav.menu-bar ul.menu {
+    display: flex;
+    list-style: none;
+  }
+  section.page header.header nav.menu-bar ul.menu li {
+    margin-right: 15px;
+  }
+  section.page header.header nav.menu-bar ul.menu li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--medium-gray);
+    padding: 15px 20px;
+  }
+  section.page header.header nav.menu-bar ul.menu li a svg {
+    margin-left: 8px;
+  }
+  section.page header.header nav.menu-bar ul.login {
+    display: flex;
+    list-style: none;
+  }
+  section.page header.header nav.menu-bar ul.login li {
+    margin-left: 25px;
+  }
+  section.page header.header nav.menu-bar ul.login li a {
+    display: block;
+    text-decoration: none;
+    color: var(--medium-gray);
+    padding: 15px 25px;
+  }
+  section.page header.header nav.menu-bar ul.login li:last-child a {
+    border: 2px solid var(--medium-gray);
+    border-radius: 15px;
+  }
+  section.page header.header nav.mobile-bar {
+    display: none;
+  }
+  section.page main.content-cover {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 25px 15px;
+  }
+  section.page main.content-cover div.img {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+  }
+  section.page main.content-cover div.img picture {
+    width: 80%;
+  }
+  section.page main.content-cover div.img picture img {
+    width: 100%;
+  }
+  section.page main.content-cover div.cover {
+    text-align: left;
+    width: 40%;
+    padding: 15px 10px;
+    position: relative;
+  }
+  section.page main.content-cover div.cover h2.title {
+    font-size: 3.5em;
+    padding-bottom: 45px;
+  }
+  section.page main.content-cover div.cover p.text {
+    padding: 0 0 25px;
+    padding-right: 50px;
+    padding-bottom: 45px;
+  }
+  section.page main.content-cover div.cover button.lm {
+    margin-bottom: 100px;
+  }
+  section.page main.content-cover div.cover ul.clients {
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 25px;
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 1000px) {
+  body {
+    font-size: 15px;
+  }
+  section.page main.content-cover {
+    padding: 25px 15px;
+  }
+  section.page main.content-cover div.img {
+    width: 50%;
+  }
+  section.page main.content-cover div.cover {
+    width: 50%;
+  }
+  section.page main.content-cover div.cover h2.title {
+    font-size: 4em;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+  section.page main.content-cover {
+    padding: 25px 50px;
+  }
+}
+@media (min-width: 1400px) {
+  section.page main.content-cover {
+    padding: 25px 100px;
+  }
+  section.page main.content-cover div.img picture {
+    width: 70%;
+  }
+  section.page main.content-cover div.cover {
+    width: 50%;
+    padding: 35px 20px;
+  }
+  section.page main.content-cover div.cover h2.title {
+    font-size: 4.5em;
+    padding-bottom: 45px;
+  }
+  section.page main.content-cover div.cover p.text {
+    padding-right: 125px;
+    padding-bottom: 45px;
+  }
+  section.page main.content-cover div.cover button.lm {
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 1401px) {
+  body {
+    font-size: 16px;
+  }
+  section.page main.content-cover {
+    justify-content: space-between;
+  }
+  section.page main.content-cover div.img {
+    width: 800px;
+  }
+}
+@media (min-width: 1870px) {
+  body {
+    font-size: 22px;
+  }
+  section.page main.content-cover div.cover p.text {
+    padding-top: 50px;
+  }
+  section.page main.content-cover div.cover button.lm {
+    margin-top: 50px;
+    padding: 20px 30px;
+  }
 }/*# sourceMappingURL=style.css.map */
