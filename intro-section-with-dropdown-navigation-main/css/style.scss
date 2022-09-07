@@ -50,6 +50,7 @@ section.page {
         height: 100vh;
         right: -65vw;
         top: 0;
+        z-index: 1;
 
         &.open{
           animation: OpenMenu 300ms linear 0ms 1 normal forwards;
@@ -274,6 +275,7 @@ section.page {
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 
   a {
     color: var(--medium-gray);
@@ -472,6 +474,7 @@ section.page {
           width: 100%;
           bottom: 25px;
           padding-bottom: 0;
+          z-index: -1;
         }
       }
     }

@@ -202,6 +202,7 @@ section.page header.header nav.mobile-bar div.bg {
   height: 100vh;
   right: -65vw;
   top: 0;
+  z-index: 1;
 }
 section.page header.header nav.mobile-bar div.bg.open {
   -webkit-animation: OpenMenu 300ms linear 0ms 1 normal forwards;
@@ -380,6 +381,7 @@ section.page main.content-cover div.cover ul.clients li svg {
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 }
 .attribution a {
   color: var(--medium-gray);
@@ -540,6 +542,7 @@ section.page main.content-cover div.cover ul.clients li svg {
     width: 100%;
     bottom: 25px;
     padding-bottom: 0;
+    z-index: -1;
   }
 }
 @media (min-width: 1000px) {
