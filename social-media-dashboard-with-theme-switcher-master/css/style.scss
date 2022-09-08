@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import 'variables';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--white);
+}
+
+
+div.page{
+    padding: 0 150px;
+
+    header.header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0;
+        
+
+        div.background{
+            background-color: var(--very-pale-blue);
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            width: 100%;
+            height: 300px;
+        }
+
+        div.dashboard{
+            h1.title{
+                font-weight: 700;
+                font-size: 2em;
+                color: var(--very-dark-blue);
+            }
+
+            span{
+                color: var(--dark-grayish-blue);
+                font-weight: 700;
+                font-size: 1em;
+            }
+        }
+
+        div.toggle{
+            display: flex;
+            align-items: center;
+            span{
+                color: var(--dark-grayish-blue);
+                font-weight: 700;
+                font-size: 1em;
+                margin-right: 10px;
+            }
+
+            button{
+                position: relative;
+                width: 50px;
+                height: 25px;
+                outline: none;
+                border: none;
+                border-radius: 15px;
+                background-color: var(--toggle-light);
+            
+                &::after{
+                    content: '';
+                    position: absolute;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    background-color: var(--very-pale-blue);
+                    top: 50%;
+                    right: 3px;
+                    transform: translate(0, -52%);
+                }
+            }
+        }
+    }
+
+    main.content-cover{
+        div.social-medias{
+            padding-bottom: 50px;
+            ul{
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                li{
+                    background-color: var(--light-grayish-blue);
+                    width: 23%;
+                    text-align: center;
+                    border-radius: 10px;
+
+                    div.color{
+                        height: 4px;
+                        width: 100%;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                    }
+
+                    header{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 25px 0;
+
+                        span{
+                            margin-left: 10px;
+                            font-size: 0.9em;
+                            color: var(--dark-grayish-blue);
+                            font-weight: 700;
+                        }
+                    }
+
+                    div.followers{
+                        h3.statistic{
+                            font-size: 4em;
+                            color: var(--very-dark-blue);
+                        }
+                        span{
+                            color: var(--dark-grayish-blue);
+                            text-transform: uppercase;
+                            font-size: 0.9em;
+                            letter-spacing: 0.4em;
+                        }
+                    }
+
+                    span.today{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 25px;
+                        color: var(--lime-green);
+                        font-size: 1em;
+                        font-weight: 700;
+
+                        svg{
+                            margin-right: 5px;
+                        }
+                    }
+
+                    &:first-child{
+                        div.color{
+                            background-color: var(--facebook);
+                        }
+                    }
+
+                    &:nth-child(2){
+                        div.color{
+                            background-color: var(--twitter);
+                        }
+                    }
+
+                    &:nth-child(3){
+                        div.color{
+                            background: rgb(253,196,104);
+                            background: var(--instagram);
+                        }
+                    }
+
+                    &:last-child{
+                        div.color{
+                            background-color: var(--youTube);
+                        }
+                        span.today{
+                            color: var(--bright-red);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    section.overview{
+        h2.title{
+            font-size: 1.7em;
+            color: var(--dark-grayish-blue);
+        }
+
+        div.informations{
+            ul.infos{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                list-style: none;
+                li{
+                    background-color: var(--light-grayish-blue);
+                    width: 23%;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.attribution { 
+
+    font-size: 11px; 
+    text-align: center; 
+    color: var(--dark-grayish-blue); 
+
+    a { 
+        color: var(--very-dark-blue);
+        text-decoration: none;
+    }
+}
+ 
