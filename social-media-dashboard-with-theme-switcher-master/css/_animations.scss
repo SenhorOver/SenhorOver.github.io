@@ -1,0 +1,19 @@
+@keyframes toggleDark {
+    from{
+        right: 3px;
+    }
+
+    to{
+        right: 27px;
+    }
+}
+
+@keyframes toggleWhite {
+    from{
+        right: 27px;
+    }
+
+    to{    
+        right: 3px;
+    }
+}

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import 'variables';
+@import 'animations';
 
 
 *{
@@ -32,13 +33,18 @@ div.page{
             left: 0;
             width: 100%;
             height: 300px;
+            transition: background-color 200ms ease;
+
+            &.dark{
+                background-color: var(--very-dark-blue-dark-top-bg);
+            }
         }
 
         div.dashboard{
             h1.title{
                 font-weight: 700;
                 font-size: 2em;
-                color: var(--very-dark-blue);
+                color: var(--very-dark-blue-white-text);
             }
 
             span{
@@ -66,6 +72,7 @@ div.page{
                 border: none;
                 border-radius: 15px;
                 background-color: var(--toggle-light);
+                cursor: pointer;
             
                 &::after{
                     content: '';
@@ -77,6 +84,28 @@ div.page{
                     top: 50%;
                     right: 3px;
                     transform: translate(0, -52%);
+                    transition: background 200ms ease;
+                }
+
+                &:hover{
+                    background: rgb(55,143,230);
+                    background: var(--toggle-dark);
+                }
+
+                &.dark{
+                    background: rgb(55,143,230);
+                    background: var(--toggle-dark);
+                    
+                    &::after{
+                        background-color: var(--very-dark-blue-white-text);
+                        animation: toggleDark 200ms linear 0ms 1 normal forwards;
+                    }
+                }
+
+                &.white{
+                    &::after{
+                        animation: toggleWhite 200ms linear 0ms 1 normal forwards;
+                    }
                 }
             }
         }
@@ -84,7 +113,7 @@ div.page{
 
     main.content-cover{
         div.social-medias{
-            padding-bottom: 50px;
+            padding-bottom: 25px;
             ul{
                 list-style: none;
                 display: flex;
@@ -94,6 +123,7 @@ div.page{
                     width: 23%;
                     text-align: center;
                     border-radius: 10px;
+                    transition: background-color 200ms ease;
 
                     div.color{
                         height: 4px;
@@ -119,7 +149,7 @@ div.page{
                     div.followers{
                         h3.statistic{
                             font-size: 4em;
-                            color: var(--very-dark-blue);
+                            color: var(--very-dark-blue-white-text);
                         }
                         span{
                             color: var(--dark-grayish-blue);
@@ -170,6 +200,11 @@ div.page{
                             color: var(--bright-red);
                         }
                     }
+
+                    &:hover{
+                        background-color: hsl(226, 39%, 89%);
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -180,6 +215,7 @@ div.page{
         h2.title{
             font-size: 1.7em;
             color: var(--dark-grayish-blue);
+            margin: 25px 0;
         }
 
         div.informations{
@@ -192,6 +228,52 @@ div.page{
                     background-color: var(--light-grayish-blue);
                     width: 23%;
                     margin-bottom: 25px;
+                    border-radius: 10px;
+                    padding: 25px;
+                    transition: background-color 200ms ease;
+
+                    header{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 25px;
+                        h4.title{
+                            color: var(--dark-grayish-blue);
+                            font-weight: 700;
+                        }
+                    }
+
+                    div.info{
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 2.5em;
+                        font-weight: 700;
+
+                        span{
+                            display: flex;
+                            align-items: flex-end;
+                            font-size: 0.35em;
+                            color: var(--lime-green);
+
+                            svg{
+                                margin-right: 5px;
+                                transform: translateY(-125%);
+                            }
+                        }
+                    }
+
+                    &:nth-child(2), &:nth-child(7), &:last-child{
+                        div.info{
+                            span{
+                                color: var(--bright-red);
+                            }
+                        }
+                    }
+
+                    &:hover{
+                        background-color: hsl(226, 39%, 89%);
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -209,7 +291,7 @@ div.page{
     color: var(--dark-grayish-blue); 
 
     a { 
-        color: var(--very-dark-blue);
+        color: var(--very-dark-blue-white-text);
         text-decoration: none;
     }
 }
