@@ -2,6 +2,10 @@
 class DarkMode{
     constructor(){
         this.topBg = document.querySelector('.background')
+        this.h1 = document.querySelector('h1')
+        this.body = document.querySelector('body')
+        this.topCards = document.querySelectorAll('.topCards')
+        this.overview = document.querySelector('.overview')
     }
 
     init(){
@@ -23,8 +27,15 @@ class DarkMode{
             
             this.colorChange.buttonColor(el)
 
-            this.colorChange.backgroundColors.bind(this)()
+            this.colorChange.bodyColor.bind(this)()
 
+            this.colorChange.bgTop.bind(this)()
+
+            this.colorChange.h1Title.bind(this)()
+
+            this.colorChange.topCardsColor.bind(this)()
+
+            this.colorChange.overviewDark.bind(this)()
         }
     }
     
@@ -45,21 +56,46 @@ class DarkMode{
             el.classList.add('dark')
         },
 
-        backgroundColors(){
-            console.log(this.topBg);
-            if(!this.topBg.classList.contains('dark') && !this.topBg.classList.contains('white')){
-                this.topBg.classList.add('dark')
+        bodyColor(){
+            if(this.body.classList.contains('dark')){
+                this.body.classList.remove('dark')
                 return
             }
+            this.body.classList.add('dark')
+        },
 
+        bgTop(){
             if(this.topBg.classList.contains('dark')){
                 this.topBg.classList.remove('dark')
-                this.topBg.classList.add('white')
                 return
             }
-
-            this.topBg.classList.remove('white')
             this.topBg.classList.add('dark')
+        },
+
+        h1Title(){
+            if(this.h1.classList.contains('dark')){
+                this.h1.classList.remove('dark')
+                return
+            }
+            this.h1.classList.add('dark')
+        },
+
+        topCardsColor(){
+            this.topCards.forEach(el => {
+                if(el.classList.contains('dark')){
+                    el.classList.remove('dark')
+                    return
+                }
+                el.classList.add('dark')
+            });
+        },
+
+        overviewDark(){
+            if(this.overview.classList.contains('dark')){
+                this.overview.classList.remove('dark')
+                return
+            }
+            this.overview.classList.add('dark')
         }
     }
 }

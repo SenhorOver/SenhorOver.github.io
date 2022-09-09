@@ -63,6 +63,22 @@ body {
   font-size: 14px;
   font-family: "Inter", sans-serif;
   background-color: var(--white);
+  transition: background-color 200ms ease;
+}
+body.dark {
+  background-color: var(--very-dark-blue-dark-bg);
+}
+body.dark .attribution {
+  color: var(--desaturated-blue);
+}
+body.dark .attribution a {
+  color: var(--white);
+}
+body.dark div.page header.header div.sep {
+  background-color: hsl(228deg, 18%, 27%);
+}
+body.dark div.page header.header div.toggle span {
+  color: var(--desaturated-blue);
 }
 
 div.page {
@@ -86,15 +102,26 @@ div.page header.header div.background {
 div.page header.header div.background.dark {
   background-color: var(--very-dark-blue-dark-top-bg);
 }
+div.page header.header div.sep {
+  display: none;
+}
 div.page header.header div.dashboard h1.title {
   font-weight: 700;
   font-size: 2em;
   color: var(--very-dark-blue-white-text);
+  transition: background-color 200ms ease;
+}
+div.page header.header div.dashboard h1.title.dark {
+  color: var(--white);
+}
+div.page header.header div.dashboard h1.title.dark + span {
+  color: var(--desaturated-blue);
 }
 div.page header.header div.dashboard span {
   color: var(--dark-grayish-blue);
   font-weight: 700;
   font-size: 1em;
+  transition: background-color 200ms ease;
 }
 div.page header.header div.toggle {
   display: flex;
@@ -105,6 +132,7 @@ div.page header.header div.toggle span {
   font-weight: 700;
   font-size: 1em;
   margin-right: 10px;
+  transition: background-color 200ms ease;
 }
 div.page header.header div.toggle button {
   position: relative;
@@ -177,16 +205,19 @@ div.page main.content-cover div.social-medias ul li header span {
   font-size: 0.9em;
   color: var(--dark-grayish-blue);
   font-weight: 700;
+  transition: background-color 200ms ease;
 }
 div.page main.content-cover div.social-medias ul li div.followers h3.statistic {
   font-size: 4em;
   color: var(--very-dark-blue-white-text);
+  transition: background-color 200ms ease;
 }
 div.page main.content-cover div.social-medias ul li div.followers span {
   color: var(--dark-grayish-blue);
   text-transform: uppercase;
   font-size: 0.9em;
   letter-spacing: 0.4em;
+  transition: background-color 200ms ease;
 }
 div.page main.content-cover div.social-medias ul li span.today {
   display: flex;
@@ -220,10 +251,24 @@ div.page main.content-cover div.social-medias ul li:hover {
   background-color: hsl(226deg, 39%, 89%);
   cursor: pointer;
 }
+div.page main.content-cover div.social-medias ul li.dark {
+  background-color: var(--dark-desaturated-blue);
+  transition: background-color 200ms ease;
+}
+div.page main.content-cover div.social-medias ul li.dark:hover {
+  background-color: hsl(227deg, 27%, 27%);
+}
+div.page main.content-cover div.social-medias ul li.dark.dark header span, div.page main.content-cover div.social-medias ul li.dark.dark div.followers span {
+  color: var(--desaturated-blue);
+}
+div.page main.content-cover div.social-medias ul li.dark.dark div.followers h3 {
+  color: var(--white);
+}
 div.page section.overview h2.title {
   font-size: 1.7em;
   color: var(--dark-grayish-blue);
   margin: 25px 0;
+  transition: background-color 200ms ease;
 }
 div.page section.overview div.informations ul.infos {
   display: flex;
@@ -248,12 +293,14 @@ div.page section.overview div.informations ul.infos li header {
 div.page section.overview div.informations ul.infos li header h4.title {
   color: var(--dark-grayish-blue);
   font-weight: 700;
+  transition: color 200ms ease;
 }
 div.page section.overview div.informations ul.infos li div.info {
   display: flex;
   justify-content: space-between;
   font-size: 2.5em;
   font-weight: 700;
+  transition: color 200ms ease;
 }
 div.page section.overview div.informations ul.infos li div.info span {
   display: flex;
@@ -272,13 +319,110 @@ div.page section.overview div.informations ul.infos li:hover {
   background-color: hsl(226deg, 39%, 89%);
   cursor: pointer;
 }
+div.page section.overview.dark h2.title, div.page section.overview.dark div.informations ul.infos li div.info {
+  color: var(--white);
+}
+div.page section.overview.dark div.informations ul.infos li {
+  background-color: var(--dark-desaturated-blue);
+}
+div.page section.overview.dark div.informations ul.infos li header h4.title {
+  color: var(--desaturated-blue);
+}
+div.page section.overview.dark div.informations ul.infos li:hover {
+  background-color: hsl(227deg, 27%, 27%);
+}
 
 .attribution {
   font-size: 11px;
   text-align: center;
   color: var(--dark-grayish-blue);
+  transition: background-color 200ms ease;
 }
 .attribution a {
   color: var(--very-dark-blue-white-text);
   text-decoration: none;
+  transition: background-color 200ms ease;
+}
+
+@media (min-width: 1750px) {
+  body {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1250px) {
+  body {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1200px) {
+  body {
+    font-size: 12px;
+  }
+  div.page {
+    padding: 0 75px;
+  }
+  div.page main.content-cover div.social-medias ul {
+    flex-wrap: wrap;
+  }
+  div.page main.content-cover div.social-medias ul li {
+    width: 48%;
+  }
+  div.page main.content-cover div.social-medias ul li:first-child, div.page main.content-cover div.social-medias ul li:nth-child(2) {
+    margin-bottom: 20px;
+  }
+  div.page section.overview div.informations ul.infos li {
+    width: 48%;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+  div.page {
+    padding: 0 25px;
+  }
+  div.page header.header {
+    flex-direction: column;
+  }
+  div.page header.header div.background {
+    top: 0;
+  }
+  div.page header.header div.dashboard {
+    width: 100%;
+  }
+  div.page header.header div.sep {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 25px 0 15px;
+    background-color: var(--dark-grayish-blue);
+    transition: background-color 200ms ease;
+  }
+  div.page header.header div.toggle {
+    width: 100%;
+    justify-content: space-between;
+  }
+  div.page main.content-cover div.social-medias ul {
+    flex-wrap: wrap;
+  }
+  div.page main.content-cover div.social-medias ul li {
+    width: 100%;
+  }
+  div.page main.content-cover div.social-medias ul li:first-child, div.page main.content-cover div.social-medias ul li:nth-child(2), div.page main.content-cover div.social-medias ul li:nth-child(3) {
+    margin-bottom: 20px;
+  }
+  div.page section.overview div.informations ul.infos li {
+    width: 100%;
+  }
+}
+@media (max-width: 410px) {
+  body {
+    font-size: 11px;
+  }
+  div.page section.overview div.informations ul.infos li div.info span svg {
+    transform: translateY(-75%);
+  }
+  .attribution {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
