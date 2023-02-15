@@ -106,6 +106,20 @@ button {
     color: black;
 }
 
+.home .home-image {
+    width: 275px;
+    height: 275px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.home img {
+    width: 100%;
+    position: relative;
+    top: -75px;
+}
+
 
 
 
@@ -272,6 +286,10 @@ button {
 
 .portfolio .list-menu li + li {
     margin-left: 15px;
+}
+
+.portfolio .list-menu .list-menu-active {
+    font-weight: bold;
 }
 
 .portfolio .projects {
