@@ -7,9 +7,15 @@ class Main {
     cacheSelectors() {
         this.liCover = document.querySelectorAll('.preview')
         this.cardCover = document.querySelectorAll('.card-cover')
+        this.liList = document.querySelector('.list-menu').children
     }
-
+    
     bindEvents(){
+        for(let li of this.liList) {
+            console.log(li)
+            li.onclick = this.events().liList_Click
+        }
+
         this.liCover.forEach(li => {
             li.onclick = this.events().liPreview_Click
         })
@@ -31,6 +37,31 @@ class Main {
                 this.events().rmOrAddNone(e.target, false)
             },
 
+            liList_Click: (e) => {
+                const el = e.target.innerText
+                const projects = document.querySelector('.projects')
+
+                for (let project of projects.children) {
+                    if(el === 'Frontend'){
+                        if (project.classList.contains('frontend')) {
+                            this.events().rmOrAddNone(project, true)
+                        } else {
+                            this.events().rmOrAddNone(project, false)
+                        }
+                        continue
+                    }
+
+                    if(el === 'Backend'){
+                        if (project.classList.contains('backend')) {
+                            this.events().rmOrAddNone(project, true)
+                        } else {
+                            this.events().rmOrAddNone(project, false)
+                        }
+                        continue
+                    }
+                    this.events().rmOrAddNone(project, true)
+                }
+            },
 
             rmOrAddNone(el, bool) {
                 if(bool) return el.classList.remove('none')
