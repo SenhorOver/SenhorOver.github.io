@@ -1,0 +1,92 @@
+/****************
+       HOME
+****************/
+
+
+.home-page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.home-page .home-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.home-page .home-content p {
+    padding: 35px 0 50px;
+    font-size: var(--22px-em);
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 1px;
+}
+
+.home-page .home-content span {
+    color: var(--text-primary);
+}
+
+.home-page .home-content a {
+    text-decoration: none;
+}
+
+.home-page .buttons button {
+    margin: 0 10px;
+}
+
+.home-page .buttons a:first-child button {
+    background-color: var(--text-primary);
+    color: var(--white);
+}
+
+
+
+
+
+
+
+
+.home-page .social {
+    position: absolute;
+    left: 10px;
+    top: 60%;
+}
+
+.home-page .social ul {
+    position: absolute;
+    left: 45px;
+    list-style: none;
+}
+
+.home-page .social ul:before {
+    content: 'Social Media';
+    font-size: 13px;
+    position: absolute;
+    font-weight: 600;
+    display: block;
+    top: -150px;
+    left: -51px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: rotate(90deg);
+}
+
+.home-page .social ul:after {
+    content: '';
+    width: 2px;
+    height: 50px;
+    position: absolute;
+    top: -70px;
+    left: 6px;
+    background-color: rgba(22, 192, 240, .6);
+}
+
+.home-page .social li {
+    font-size: var(--16px-em);
+    margin-bottom: 10px;
+}

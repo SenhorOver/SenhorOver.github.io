@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700&display=swap');
+
+:root {
+    --dark-bg-color: #263446;
+    --light-bg-color: #2B3D4F;
+    --text-primary: #16c0f0;
+    --text-secondary: #c3c0c0;
+
+    --16px-em: 0.8em;
+    --22px-em: 1.1em;
+    --23px-em: 1.15em;
+    --75px-em: 3.75em;
+    --white: #FFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    color: var(--white);
+    max-width: 100vw;
+    font-size: 20px;
+}
+
+a {
+    color: var(--white);
+}
+
+button {
+    all: unset;
+    border: 1px solid var(--text-primary);
+    border-radius: 50px;
+    padding: 12px 0;
+    font-size: var(--16px-em);
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    background: transparent;
+    min-width: 160px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 400ms ease-in-out;
+}
+
+button:hover {
+    background-color: var(--text-primary);
+    color: var(--white);
+}
+
+button:focus {
+    color: var(--white);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: var(--75px-em);
+    line-height: 1;
+    letter-spacing: 1.6px;
+}
+
+.container {
+    width: 970px;
+    margin: 0 auto;
+}
+
+.content {
+    min-height: 100vh;
+    background-color: var(--dark-bg-color);
+}
