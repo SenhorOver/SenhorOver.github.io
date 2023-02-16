@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio - Marcos V. Silva</title>
+</head>
+
+<body>
+    <header class="container header">
+        <h1>MARCOS</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Currículo</a></li>
+                <li><a href="#">Portfólio</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="container home">
+        <div class="home-content">
+            <h3>Marcos Vinicius Silva</h3>
+            <h2>WEB Developer</h2>
+            <a href="#contact">Contato</a>
+        </div>
+        <div class="home-image">
+            <!-- <img src="https://via.placeholder.com/275"> -->
+            <img src="imgs/profile-photo2.jpg">
+        </div>
+    </section>
+
+
+    <section class="container about">
+        <div class="about-content">
+            <h2>Sobre Mim</h2>
+            <h3>Estudante em Desenvolvimento WEB</h3>
+    
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quam, voluptatum, beatae possimus fugit non
+                deserunt ipsum provident ex obcaecati magni quisquam laborum repudiandae voluptate reiciendis consequatur
+                sit quibusdam! Tempore?
+                Magni, quaerat officia. Facilis dignissimos, molestias minima reprehenderit repellat voluptatem tempora
+                laboriosam recusandae totam atque quos fugit tenetur ut aut necessitatibus delectus ullam laborum. Et dolor
+                exercitationem quod sunt quae.
+            </p>
+        </div>
+        <div class="about-image">
+            <!-- <img src="https://via.placeholder.com/405"> -->
+            <img src="imgs/wallpaper-frontend.jpg">
+        </div>
+    </section>
+
+
+    <section class="container resume">
+        <h2>Minhas Experiências</h2>
+        <div class="flex">
+            <div class="professional">
+                <span>PROFISSIONAL</span>
+                <h3>Nenhuma experiência profissional</h3>
+            </div>
+            <div class="school">
+                <span>ESCOLAR</span>
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.thiago-medeiros.com/v2/">Formação Full Stack JavaScript</a>
+                        <span>Online (2022-2023)</span>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/">Curso JavaScript e TypeScript do básico ao avançado</a>
+                        <span>Online (2022-Cursando)</span>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://ceappedreira.org.br/atuacao/cursos/cursos-tecnicos/redes-de-computadores/">Técnico em Redes de Computadores</a>
+                        <span>CEAP (2019-2020)</span>
+                    </li>
+                    <li>
+                        Ensino Médio
+                        <span>Dr. Ayres Neto (2019-2021)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container portfolio">
+        <h2>Meu Portfólio</h2>
+        <!--
+            TODO: Adicionar os últimos projetos*
+        -->
+        <ul class="list-menu">
+            <li>Ver todos</li>
+            <li class="list-menu-active">Destaques</li> 
+            <!-- TODO: Fazer funcionalidade de DESTAQUES no JavaScript -->
+            <!-- TODO: Fazer classe list-menu-active mudar para o último filtro clicado-->
+            <li>Frontend</li>
+            <li>Backend</li>
+        </ul>
+        <ul class="projects">
+            <div class="frontend backend featured">
+                <li class="preview">
+                    <img src="https://raw.githubusercontent.com/SenhorOver/mktp-store-v2/main/public/images/pages/Login.png">
+                    <div class="li-cover">
+                        Ver Mais
+                    </div>
+                </li>
+                <div class="card-cover none">
+                    <div class="card">
+                        <div>
+                            <h3>Projeto MKTP Store</h3>
+                            <p>
+                                Projeto de site construído utilizando Next JS. 
+                                Um site de venda de produtos entre pessoas, como a OLX, com sistema de Login e Search, 
+                                Além de possuir uma API própria e um sistema para salvar os anúncios na database do MongoDB
+                            </p>
+                        </div>
+                        <div>
+                            <div>
+                                <a target="_blank" href="https://github.com/SenhorOver/mktp-store-v2">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/></svg>
+                                </a>
+                                <!-- <a target="_blank" href="social-media-dashboard-with-theme-switcher-master/index.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z"/></svg>
+                                </a> -->
+                                <span>
+                                    Não possui Live Preview
+                                </span>
+                            </div>
+                            <footer>Feito como projeto final do curso <a target="_blank" href="https://www.thiago-medeiros.com/v2/">Formação FullStack</a></footer> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="backend featured">
+                <li class="preview">
+                    <img src="imgs/api1.png">
+                    <div class="li-cover">
+                        Ver Mais
+                    </div>
+                </li>
+                <div class="card-cover none">
+                    <div class="card">
+                        <div>
+                            <h3>API - Servir aplicação React</h3>
+                            <p>
+                                API feita com Express que serve uma aplicação React, possuindo um sistema de Token para Login de usuário e validação.
+                                Todos os dados são gerenciados pelo Sequelize e salvos em uma Database MariaDB que está ligada no sistema do Google Cloud
+                            </p>
+                        </div>
+                        <div>
+                            <div>
+                                <a target="_blank" href="https://github.com/SenhorOver/api-rest-sequelize-mariadb">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/></svg>
+                                </a>
+                                <span>
+                                    Não possui Live Preview
+                                </span>
+                            </div>
+                            <footer>Feito como projeto do curso <a target="_blank" href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/">JavaScript e TypeScript</a></footer> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frontend">
+                <li class="preview">
+                    <img src="/imgs/FrontendMentor-ex6.PNG">
+                    <div class="li-cover">
+                        Ver Mais
+                    </div>
+                </li>
+                <div class="card-cover none">
+                    <div class="card">
+                        <div>
+                            <h3>Social media dashboard with theme switcher</h3>
+                            <p>
+                                Dashboard de controle de redes sociais com alternância entre light-theme e dark-theme
+                            </p>
+                        </div>
+                        <div>
+                            <div>
+                                <a target="_blank" href="https://github.com/SenhorOver/SenhorOver.github.io/tree/master/social-media-dashboard-with-theme-switcher-master">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/></svg>
+                                </a>
+                                <a target="_blank" href="social-media-dashboard-with-theme-switcher-master/index.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z"/></svg>
+                                </a>
+                            </div>
+                            <footer>Feito pela plataforma <a target="_blank" href="https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H">frontendmentor.io</a></footer> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frontend">
+                <li class="preview">
+                    <img src="/imgs/FrontendMentor-ex5.PNG">
+                    <div class="li-cover">
+                        Ver Mais
+                    </div>
+                </li>
+                <div class="card-cover none">
+                    <div class="card">
+                        <div>
+                            <h3>Intro section with dropdown navigation</h3>
+                            <p>
+                                Página principal de uma empresa fictícia com menu dropdown no header, possui menu hamburguer quando a está no mobile.
+                            </p>
+                        </div>
+                        <div>
+                            <div>
+                                <a target="_blank" href="https://github.com/SenhorOver/SenhorOver.github.io/tree/master/intro-section-with-dropdown-navigation-main">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/></svg>
+                                </a>
+                                <a target="_blank" href="intro-section-with-dropdown-navigation-main/index.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z"/></svg>
+                                </a>
+                            </div>
+                            <footer>Feito pela plataforma <a target="_blank" href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5">frontendmentor.io</a></footer> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frontend">
+                <li class="preview">
+                    <img src="/imgs/FrontendMentor-ex4.PNG">
+                    <div class="li-cover">
+                        Ver Mais
+                    </div>
+                </li>
+                <div class="card-cover none">
+                    <div class="card">
+                        <div>
+                            <h3>Sunnyside agency landing page</h3>
+                            <p>
+                                Página completa de uma agência fictícia, possui versão mobile
+                            </p>
+                        </div>
+                        <div>
+                            <div>
+                                <a target="_blank" href="https://github.com/SenhorOver/SenhorOver.github.io/tree/master/sunnyside-agency-landing-page-main">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/></svg>
+                                </a>
+                                <a target="_blank" href="sunnyside-agency-landing-page-main/index.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z"/></svg>
+                                </a>
+                            </div>
+                            <footer>Feito pela plataforma <a target="_blank" href="https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef">frontendmentor.io</a></footer> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frontend">
+                <li class="preview">
+                    <img src="/imgs/FrontendMentor-ex2.PNG">
+                    <div class="li-cover">
+                        Ver Mais
+                    </div>
+                </li>
+                <div class="card-cover none">
+                    <div class="card">
+                        <div>
+                            <h3>Interactive rating component</h3>
+                            <p>
+                                Componente de avaliação, primeiro pede para o usuário avaliar o serviço e após isso agradece mostrando a nota escolhida, além de possuir responsividade
+                            </p>
+                        </div>
+                        <div>
+                            <div>
+                                <a target="_blank" href="https://github.com/SenhorOver/SenhorOver.github.io/tree/master/interactive-rating-component-main">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/></svg>
+                                </a>
+                                <a target="_blank" href="interactive-rating-component-main/index.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z"/></svg>
+                                </a>
+                            </div>
+                            <footer>Feito pela plataforma <a target="_blank" href="https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI">frontendmentor.io</a></footer> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frontend">
+                <li class="preview">
+                    <img src="/imgs/FrontendMentor-ex1.PNG">
+                    <div class="li-cover">
+                        Ver Mais
+                    </div>
+                </li>
+                <div class="card-cover none">
+                    <div class="card">
+                        <div>
+                            <h3>Product preview card component</h3>
+                            <p>
+                                Design do preview card de um produto com responsividade
+                            </p>
+                        </div>
+                        <div>
+                            <div>
+                                <a target="_blank" href="https://github.com/SenhorOver/SenhorOver.github.io/tree/master/product-preview-card-component-main">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/></svg>
+                                </a>
+                                <a target="_blank" href="product-preview-card-component-main/index.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z"/></svg>
+                                </a>
+                            </div>
+                            <footer>Feito pela plataforma <a target="_blank" href="https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa">frontendmentor.io</a></footer> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frontend">
+                <li class="preview">
+                    <img src="/imgs/FrontendMentor-ex3.PNG">
+                    <div class="li-cover">
+                        Ver Mais
+                    </div>
+                </li>
+                <div class="card-cover none">
+                    <div class="card">
+                        <div>
+                            <h3>NFT preview card component</h3>
+                            <p>
+                                Simples preview card de uma NFT, com interações ao ver a 'NFT' e o criador, possui responsividade
+                            </p>
+                        </div>
+                        <div>
+                            <div>
+                                <a target="_blank" href="https://github.com/SenhorOver/SenhorOver.github.io/tree/master/nft-preview-card-component-main">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px">    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/></svg>
+                                </a>
+                                <a target="_blank" href="nft-preview-card-component-main/index.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z"/></svg>
+                                </a>
+                            </div>
+                            <footer>Feito pela plataforma <a target="_blank" href="https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U">frontendmentor.io</a></footer> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </ul>
+    </section>
+
+    <footer class="container contact">
+        <h2>Contato</h2>
+        
+        <ul>
+            <li>
+                <span>Email</span> <a href="mailto:mrcsvs@outlook.com">MrcsVS@outlook.com</a>
+            </li>
+            <li>
+                <span>Telefone</span> 11 99801-9944 (WhatsApp)
+            </li>
+            <li>
+                <span>LinkedIn</span>
+                <a target='_blank' href="https://www.linkedin.com/in/marcos-v-s/">
+                    linkedin.com/in/marcos-v-s/
+                </a>
+            </li>
+        </ul>
+    </footer>   
+    <script src="script.js"></script>
+</body>
+</html>
