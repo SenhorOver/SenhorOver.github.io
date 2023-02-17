@@ -1,5 +1,16 @@
 @import 'modules/defaults.css';
 
-/* Pages */
+/* Header */
 @import 'modules/header.css';
+
+/* NavBar */
+@import 'modules/navbar-pages.css';
+
+/* Pages */
 @import 'modules/home-page.css';
+@import 'modules/about-page.css';
+@import 'modules/skills-page.css';
+
+/* Animations */
+@import 'modules/animations.css'
+

@@ -9,6 +9,7 @@
     justify-content: center;
     text-align: center;
     color: var(--white);
+    z-index: 7;
 }
 
 .home-page .home-content {
@@ -58,7 +59,7 @@
 
 .home-page .social ul {
     position: absolute;
-    left: 45px;
+    left: 35px;
     list-style: none;
 }
 
@@ -89,4 +90,12 @@
 .home-page .social li {
     font-size: var(--16px-em);
     margin-bottom: 10px;
+}
+
+.home-page .social li a {
+    transition: all 400ms ease-in-out;
+}
+
+.home-page .social li a:hover{
+    color: var(--text-primary);
 }

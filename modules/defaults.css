@@ -6,6 +6,10 @@
     --text-primary: #16c0f0;
     --text-secondary: #c3c0c0;
 
+    --text-primary-anim: #16c0f099;
+    --text-primary-anim100: #16c0f000;
+
+    --14px-em: 0.7em;
     --16px-em: 0.8em;
     --22px-em: 1.1em;
     --23px-em: 1.15em;
@@ -13,10 +17,28 @@
     --white: #FFF;
 }
 
+::-webkit-scrollbar {
+    width: 4px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track {
+    /* background-color: transparent; */
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb { 
+    background-color: var(--text-primary);
+    border-radius: 10px;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    background-color: var(--dark-bg-color);
 }
 
 body {

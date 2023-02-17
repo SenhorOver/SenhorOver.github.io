@@ -9,6 +9,9 @@
     <title>Portfolio</title>
 </head>
 <body>
+    <!--
+        HEADER
+    -->
     <header class="header">
         <nav class="container">
             <h2 class="title"><a href="#">Marcos</a></h2>
@@ -17,16 +20,21 @@
             </div>
         </nav>
     </header>
+
+
+    <!--
+        HOME PAGE
+    -->
     <section class="content home-page"> 
         <div class="social">
             <ul>
                 <li>
-                    <a href="#">
+                    <a target="_blank" href="https://github.com/SenhorOver">
                         <i class="fa-brands fa-github"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a target="_blank" href="https://www.linkedin.com/in/marcos-v-s/">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                 </li>
@@ -34,7 +42,7 @@
         </div>
         <div class="home-content">
             <h1>Marcos V. Silva</h1>
-            <p>Sou um Desenvolvedor <span>FrontEnd, Backend, Fullstack</span></p>
+            <p>Sou um Desenvolvedor <span id="writing-text"></span></p>
             <div class="buttons">
                 <a href="#">
                     <button>Contato</button>
@@ -45,5 +53,79 @@
             </div>
         </div>
     </section>
+
+
+    <!--
+        TODO: Fazer animação de trocar de página
+        insight: Utilizar um Array para definir a sequência das páginas, e colocar uma classe em todas as páginas que tiverem um index menor que a página clicada,
+        dessa forma todas as páginas anteriores vão subir, e para descer, eu verifico se o index é maior e faço descer todas as páginas que tenha o índice maior que ela, menos a que
+        já está a mostra
+    -->
+
+    <!--
+        ABOUT
+    -->
+    <section class="content about">
+        <br><br><br><br><br><br><br><br><br>
+        <h2>Conteúdo</h2>
+    </section>
+
+
+
+    <!--
+        HABILIDADES
+    -->
+    <section class="content skill">
+        <br><br><br><br><br><br><br><br><br>
+        <h2>HABILIDADES</h2>
+    </section>
+
+
+
+
+    <!--
+        NAVBAR PAGES
+    -->
+    <nav class="nav-pages">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="active"></span>
+                </a>
+                <div>Home</div>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+                <div>Sobre</div>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+                <div>Habilidades</div>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+                <div>Experiência</div>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+                <div>Portfólio</div>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                </a>
+                <div>Contato</div>
+            </li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
 </body>
 </html>
