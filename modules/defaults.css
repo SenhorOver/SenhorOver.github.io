@@ -6,10 +6,13 @@
     --text-primary: #16c0f0;
     --text-secondary: #c3c0c0;
     --text-tertiary: #c7c5c7;
+    --resume-border: #374757;
+    --timeline-icon: #5e7184;
 
     --text-primary-anim: #16c0f099;
     --text-primary-anim100: #16c0f000;
 
+    --13px-em: 0.65em;
     --14px-em: 0.7em;
     --16px-em: 0.8em;
     --22px-em: 1.1em;
@@ -101,6 +104,7 @@ h1 {
     position: absolute;
     top: 0;
     width: 100%;
+    padding-top: 125px;
 }
 
 .page-up {
