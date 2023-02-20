@@ -35,7 +35,7 @@
     background-color: transparent;
 }
 
-.nav-pages li span.active {
+.nav-pages li span.btn-active {
     background-color: var(--text-primary);
     box-shadow: 0 0 0 0 var(--text-primary-anim);
     animation: pulseInfinite 1s infinite cubic-bezier(.66, 0, 0, 1);

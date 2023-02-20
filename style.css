@@ -7,9 +7,12 @@
 @import 'modules/navbar-pages.css';
 
 /* Pages */
-@import 'modules/home-page.css';
-@import 'modules/about-page.css';
-@import 'modules/skills-page.css';
+@import 'modules/pages/home-page.css';
+@import 'modules/pages/about-page.css';
+@import 'modules/pages/skills-page.css';
+@import 'modules/pages/resume-page.css';
+@import 'modules/pages/portfolio-page.css';
+@import 'modules/pages/contact-page.css';
 
 /* Animations */
 @import 'modules/animations.css'
