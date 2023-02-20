@@ -19,23 +19,23 @@
     height: 40px;
 }
 
-.header h2.title {
+.header h2.main-title {
     position: relative;
     line-height: 1;
     font-size: var(--23px-em);
 }
 
-.header h2.title a {
+.header h2.main-title a {
     text-decoration: none;
     text-transform: capitalize;
     font-weight: 600;
 }
 
-.header h2.title:first-letter {
+.header h2.main-title:first-letter {
     color: var(--text-primary);
 }
 
-.header h2.title::after {
+.header h2.main-title::after {
     content: '';
     position: absolute;
     width: 5px;

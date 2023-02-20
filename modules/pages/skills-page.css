@@ -1,3 +1,68 @@
 .skill {
     z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 60px;
+}
+
+.skill li {
+    width: 31.5%;
+    background-color: var(--light-bg-color);
+    padding: 35px 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border-bottom: 2px solid rgba(22, 192, 240, .65);
+    transition: all 400ms ease-in-out;
+}
+
+.skill li:hover .icon i {
+    color: var(--white);
+    background-color: var(--text-primary);
+}
+
+.skill li:hover {
+    position: relative;
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 14px rgb(0 0 0 / 10%);
+    border-bottom: 2px solid var(--text-primary);
+}
+
+.skill li .icon i {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 25px;
+    border: 1px solid var(--text-primary);
+    border-radius: 50%;
+    color: var(--text-primary);
+    transition: all 400ms ease-in-out;
+}
+
+
+.skill li h4 {
+    display: inline-block;
+    color: var(--white);
+    font-size: var(--16px-em);
+    letter-spacing: 1px;
+    margin: 20px 0;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.skill li p {
+    line-height: 1.8;
+    margin-bottom: 0;
+    font-weight: 400;
+    color: var(--text-tertiary);
+    font-size: var(--14px-em);
 }
