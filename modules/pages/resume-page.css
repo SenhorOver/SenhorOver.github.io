@@ -1,7 +1,6 @@
 .resume {
     z-index: 4;
     display: flex;
-    background-color: var(--light-bg-color);
 }
 
 .resume ul {

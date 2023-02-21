@@ -89,6 +89,7 @@ h1 {
     letter-spacing: 1.6px;
 }
 
+
 .container {
     width: 1170px;
     margin: 0 auto;
@@ -96,7 +97,7 @@ h1 {
 
 .content {
     min-height: 100vh;
-    background-color: var(--dark-bg-color);
+    background-color: var(--light-bg-color);
     transition: all 1000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
 }
 
@@ -148,4 +149,8 @@ h2.title::after {
     bottom: -17px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+body .content:nth-child(even) {
+    background-color: var(--dark-bg-color);
 }

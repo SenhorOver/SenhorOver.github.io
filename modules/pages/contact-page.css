@@ -1,4 +1,58 @@
 .contact {
     z-index: 2;
-    background-color: var(--light-bg-color);
+}
+
+.contact .contact-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .contact-infos {
+    width: 33%;
+    background-color: var(--dark-bg-color);
+    border: 3px solid var(--resume-border);
+}
+
+.contact .contact-infos ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.contact .contact-infos li {
+    text-align: center;
+    padding: 25px 0;
+}
+
+.contact .contact-infos h4 {
+    font-size: var(--16px-em);
+    font-weight: 600;
+    padding-bottom: 15px;
+    letter-spacing: .5px;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.contact .contact-infos span {
+    display: block;
+    margin-bottom: 0;
+    line-height: 20px;
+    font-weight: 600;
+    font-size: var(--13px-em);
+    color: #c7c5c7;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.contact .contact-infos span a {
+    color: #c7c5c7;
+}
+
+.contact .contact-form {
+    width: 65%;
+    background-color: var(--dark-bg-color);
+    border: 3px solid var(--resume-border);
+}
+
+.contact .contact-content input {
+    display: block;
 }
