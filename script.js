@@ -9,6 +9,11 @@ class Main{
         // NAVBAR PAGES
         this.pageNames = ['Home', 'Sobre', 'Habilidades', 'Experiência', 'Portfólio', 'Contato']
         this.pages = document.querySelectorAll('.content')
+
+
+        // LIST PROJECTS
+        this.projects = document.querySelectorAll('.proj')
+        this.timeout = null
     }
 
     init() {
@@ -26,6 +31,11 @@ class Main{
 
         // NAVBAR PAGES
         this.btnNavbar = document.querySelectorAll('.nav-button');
+
+
+
+        // LIST PROJECTS
+        this.btnFilter = document.querySelectorAll('.btn-filter')
     }
 
     bindEvents() {
@@ -33,6 +43,10 @@ class Main{
 
          this.btnNavbar.forEach(button => {
             button.onclick = this.events().navbarPages.btn_Click
+         })
+
+         this.btnFilter.forEach(button => {
+            button.onclick = this.events().listProjects.btnFilter_Click
          })
     }
 
@@ -95,7 +109,65 @@ class Main{
                 }
             },
 
+            listProjects: {
+                btnFilter_Click: (e) => {
+                    if(this.timeout) return
+                    const el = e.target
+                    
+                    if(el.innerText === 'FrontEnd') {
+                        this.projects.forEach(project => {
+                            if(project.classList.contains('frontend')) {
+                                this.events().utils.rmAddClass(project, 'abs', true)
+                                this.events().utils.rmAddClass(project, 'filtred', true)
+                                return
+                            }
+                            this.events().utils.rmAddClass(project, 'filtred', false)
+                            this.timeout = setTimeout(() => {
+                                this.events().utils.rmAddClass(project, 'abs', false)
+                                this.timeout = null
+                            }, 400)
+                        })
+                        return
+                    }
 
+                    if(el.innerText === 'BackEnd') {
+                        this.projects.forEach(project => {
+                            if(project.classList.contains('backend')) {
+                                this.events().utils.rmAddClass(project, 'abs', true)
+                                this.events().utils.rmAddClass(project, 'filtred', true)
+                                return
+                            }
+                            this.events().utils.rmAddClass(project, 'filtred', false)
+                            this.timeout = setTimeout(() => {
+                                this.events().utils.rmAddClass(project, 'abs', false)
+                                this.timeout = null
+                            }, 400)
+                        })
+                        return
+                    }
+
+                    if(el.innerText === 'Destaques') {
+                        this.projects.forEach(project => {
+                            if(project.classList.contains('featured')) {
+                                this.events().utils.rmAddClass(project, 'abs', true)
+                                this.events().utils.rmAddClass(project, 'filtred', true)
+                                return
+                            }
+                            this.events().utils.rmAddClass(project, 'filtred', false)
+                            this.timeout = setTimeout(() => {
+                                this.events().utils.rmAddClass(project, 'abs', false)
+                                this.timeout = null
+                            }, 400)
+                        })
+                        return
+                    }
+
+                    this.projects.forEach(project => {
+                        this.events().utils.rmAddClass(project, 'abs', true)
+                        this.events().utils.rmAddClass(project, 'filtred', true)
+                    })
+                }
+            },
 
 
 

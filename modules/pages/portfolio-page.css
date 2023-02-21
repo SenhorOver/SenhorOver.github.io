@@ -1,3 +1,148 @@
 .portfolio {
-    z-index: 3;
+    z-index: 8;
+}
+
+.portfolio .filter {
+    margin-bottom: 30px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio .filter li + li {
+    margin-left: 15px;
+}
+
+.portfolio .filter button {
+    all: unset;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: var(--14px-em);
+    border: 1px solid var(--resume-border);
+    border-radius: 25px;
+    line-height: 1.3;
+    letter-spacing: 1.3px;
+    transition: all 400ms ease-in-out;
+}
+
+.portfolio .filter button.active {
+    background-color: var(--text-primary);
+}
+
+.portfolio .projects {
+    padding: 30px 0;
+}
+
+.portfolio .projects ul{
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40.9px;
+}
+
+.portfolio .projects li {
+    width: 31%;
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 400ms ease-in-out;
+}
+
+.portfolio .projects li.filtred {
+    transform: scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.portfolio .projects li.abs {
+    position: absolute;
+}
+
+.portfolio .projects li:hover .cover{
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.portfolio .projects li:hover img {
+    transform: scale(1.4);
+    filter: blur(0);
+}
+
+.portfolio .projects li:hover .cover h4 {
+    opacity: 1;
+}
+
+.portfolio .projects li:hover .cover p {
+    opacity: 1;
+}
+
+.portfolio .projects li:hover .cover a {
+    opacity: 1;
+}
+
+.portfolio .projects img {
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease-in-out;
+    filter: blur(1px);
+}
+
+.portfolio .projects .cover {
+    visibility: hidden;
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    background-color: rgba(43, 61, 79, .9);
+    transition: all 400ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.portfolio .projects .cover h4 {
+    opacity: 0;
+    white-space: nowrap;
+    font-size: var(--16px-em);
+    letter-spacing: 0.6px;
+    font-weight: 400;
+    transition: all 200ms ease-in-out;
+    transition-delay: 125ms;
+}
+
+.portfolio .projects .cover p {
+    opacity: 0;
+    white-space: nowrap;
+    font-size: var(--14px-em);
+    font-weight: 600;
+    color: var(--text-primary);
+    padding: 15px 0 25px;
+    transition: all 200ms ease-in-out;
+    transition-delay:125ms;
+}
+
+.portfolio .projects .cover a {
+    opacity: 0;
+    padding: 12px;
+    background-color: var(--text-primary);
+    border-radius: 50%;
+    font-size: 16px;
+    transition: all 200ms ease-in-out;
+    transition-delay:125ms;
+}
+
+.portfolio .projects .cover a + a {
+    margin-left: 10px;
 }

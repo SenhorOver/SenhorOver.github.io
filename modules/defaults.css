@@ -105,12 +105,13 @@ h1 {
     top: 0;
     width: 100%;
     padding-top: 125px;
+    max-height: 100vh;
+    overflow-y: scroll;
 }
 
 .page-up {
     transform: translateY(-100%);
 }
-
 
 h2.title {
     font-size: var(--28px-em);
