@@ -95,3 +95,43 @@
     display: inline-block;
     padding-right: 7px;
 }
+
+@media (max-width: 1200px) {
+    .about .profile-photo {
+        width: 60%;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .about .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .profile-photo {
+        width: 420px;
+        margin-bottom: 25px;
+    }
+
+    .about .about-infos { 
+        width: 750px;
+    }
+
+    .about .about-infos p { 
+        padding-bottom: 0;
+    }
+}
+
+
+@media (max-width: 768px) { 
+    .about .profile-photo {
+        width: 350px;
+        height: 430px;
+        margin-bottom: 25px;
+    }
+
+    .about .about-infos { 
+        width: 100%;
+    }
+}

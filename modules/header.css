@@ -5,7 +5,7 @@
 .header {
     background-color: var(--light-bg-color);
     border-bottom: 0.4px solid rgba(255, 255, 255, .1);
-    padding: 15px 0;
+    padding: 15px 25px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -85,4 +85,10 @@
     width: 80%;
     height: 2px;
     background-color: var(--text-primary);
+}
+
+@media (max-width: 1000px) {
+    header .container {
+        width: 100%;
+    }
 }

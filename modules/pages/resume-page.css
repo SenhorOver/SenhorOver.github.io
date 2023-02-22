@@ -28,6 +28,10 @@
     margin: 20px 0;
 }
 
+.resume li .cover {
+    background-color: var(--light-bg-color);
+}
+
 .resume li:nth-child(even) .cover {
     margin-left: auto;
     position: relative;
@@ -98,3 +102,20 @@
     line-height: 1.8;
 }
 
+@media (max-width: 1000px) {
+    .resume h4 {
+        padding: 15px 10px;
+    }
+}
+
+
+@media (max-width: 768px) { 
+    .resume li::before {
+        margin-top: -11px;
+    }
+
+    .resume li .cover {
+        width: 100%;
+        margin-top: 25px;
+    }
+}

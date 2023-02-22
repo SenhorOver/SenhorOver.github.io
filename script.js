@@ -36,6 +36,9 @@ class Main{
 
         // LIST PROJECTS
         this.btnFilter = document.querySelectorAll('.btn-filter')
+
+        // CONTACT FORM
+        this.form = document.querySelector('form')
     }
 
     bindEvents() {
@@ -48,6 +51,8 @@ class Main{
          this.btnFilter.forEach(button => {
             button.onclick = this.events().listProjects.btnFilter_Click
          })
+
+         this.form.onsubmit = this.events().contactForm.form_Submit
     }
 
     events() {
@@ -166,6 +171,22 @@ class Main{
                         this.events().utils.rmAddClass(project, 'abs', true)
                         this.events().utils.rmAddClass(project, 'filtred', true)
                     })
+                }
+            },
+
+            contactForm: {
+                form_Submit: (e) => {
+                    e.preventDefault()
+
+                    const email = this.form['email']
+                    const subject = this.form['subject']
+                    const body = this.form['body']
+
+                    function mailto() {
+                        window.location.href = `mailto:mrcsvs@outlook.com?body=${body.value}&subject=${subject.value}&email=${email.value}`
+                    }
+
+                    mailto()
                 }
             },
 

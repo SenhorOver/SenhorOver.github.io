@@ -8,6 +8,7 @@
     --text-tertiary: #c7c5c7;
     --resume-border: #374757;
     --timeline-icon: #5e7184;
+    --input-bg: #304255;
 
     --text-primary-anim: #16c0f099;
     --text-primary-anim100: #16c0f000;
@@ -97,7 +98,7 @@ h1 {
 
 .content {
     min-height: 100vh;
-    background-color: var(--light-bg-color);
+    background-color: var(--dark-bg-color);
     transition: all 1000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
 }
 
@@ -152,5 +153,34 @@ h2.title::after {
 }
 
 body .content:nth-child(even) {
-    background-color: var(--dark-bg-color);
+    background-color: var(--light-bg-color);
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 750px;
+    }
+}
+
+
+@media (max-width: 768px) { 
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 575px) { 
+    .container {
+        max-width: 100%;
+    }
 }

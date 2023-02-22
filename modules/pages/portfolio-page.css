@@ -74,7 +74,6 @@
 
 .portfolio .projects li:hover img {
     transform: scale(1.4);
-    filter: blur(0);
 }
 
 .portfolio .projects li:hover .cover h4 {
@@ -93,7 +92,6 @@
     width: 100%;
     height: 100%;
     transition: all 400ms ease-in-out;
-    filter: blur(1px);
 }
 
 .portfolio .projects .cover {
@@ -145,4 +143,37 @@
 
 .portfolio .projects .cover a + a {
     margin-left: 10px;
+}
+
+
+@media (max-width: 1200px) {
+    .portfolio .projects ul{ 
+        gap: 33.98px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .portfolio .projects ul{ 
+        gap: 30px;
+    }
+
+    .portfolio .projects li { 
+        width: 48%;
+    }
+}
+
+@media (max-width: 768px) { 
+    .portfolio .projects li { 
+        width: 100%;
+        height: auto;
+        font-size: 20px;
+    }
+
+    .portfolio .projects .cover p { 
+        padding: 25px 0;
+    }
+
+    .portfolio .projects .cover > div { 
+        margin-top: 10px;
+    }
 }

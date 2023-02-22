@@ -15,7 +15,8 @@
 
 .skill li {
     width: 31.5%;
-    background-color: var(--light-bg-color);
+    height: 235px;
+    background-color: var(--dark-bg-color);
     padding: 35px 30px;
     margin-bottom: 30px;
     text-align: center;
@@ -64,4 +65,26 @@
     font-weight: 400;
     color: var(--text-tertiary);
     font-size: var(--14px-em);
+}
+
+
+
+@media (max-width: 1000px) {
+    .skill ul { 
+        justify-content: center;
+    }
+    .skill li {
+        width: 310px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+
+@media (max-width: 768px) { 
+    .skill li {
+        width: 100%;
+        padding: 35px 30px;
+        height: auto;
+    }
 }
