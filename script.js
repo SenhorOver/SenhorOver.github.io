@@ -27,6 +27,7 @@ class Main{
 
         // HOME PAGE
         this.writingText = document.querySelector('#writing-text');
+        this.homeBtnContact = document.querySelector('.contact-navbar')
 
 
         // NAVBAR PAGES
@@ -43,6 +44,8 @@ class Main{
 
     bindEvents() {
          this.events().home.writing()
+
+         this.homeBtnContact.onclick = this.events().navbarPages.btn_Click
 
          this.btnNavbar.forEach(button => {
             button.onclick = this.events().navbarPages.btn_Click
@@ -85,22 +88,32 @@ class Main{
                             }
                         },70)
                     }, 400)
+                },
+
+                contactBtn_Click: e => {
+                    e.preventDefault()
+                    this.btnNavbar.forEach((button, index) => {
+                        const span = button.firstElementChild.firstElementChild
+                        if(span.classList.contains('btn-active')) return this.events().utils.rmAddClass(span, 'btn-active', true)
+                        if(index === 5) this.events().utils.rmAddClass(span, 'btn-active', false)
+                    })
                 }
             },
 
             navbarPages: {
                 btn_Click: (e) => {
                     const el = e.target
-                    if(el.localName !== 'span') return
-                    if(el.classList.contains('active')) return
-
-                    this.btnNavbar.forEach(button => {
+                    if(el.localName !== 'span' && !el.classList.contains('contact-navbar')) return
+                    if(el.classList.contains('btn-active')) return
+                    
+                    this.btnNavbar.forEach((button, index) => {
                         const span = button.firstElementChild.firstElementChild
                         if(span.classList.contains('btn-active')) return this.events().utils.rmAddClass(span, 'btn-active', true)
+                        if(index === 5 && el.classList.contains('contact-navbar')) this.events().utils.rmAddClass(span, 'btn-active', false)
                     })
-                    el.classList.add('btn-active')
-
-                    const pageText = e.target.parentElement.nextElementSibling.innerText
+                    !el.classList.contains('contact-navbar') ? el.classList.add('btn-active') : null
+                    
+                    let pageText = !el.classList.contains('contact-navbar') ? el.parentElement.nextElementSibling.innerHTML : 'Contato'
                     const indexPage = this.pageNames.indexOf(pageText)
                     this.pages.forEach((page, index) => {
                         if(index < indexPage) {
@@ -118,7 +131,8 @@ class Main{
                 btnFilter_Click: (e) => {
                     if(this.timeout) return
                     const el = e.target
-                    
+                    this.btnFilter.forEach(btn => this.events().utils.rmAddClass(btn, 'active', true))
+
                     if(el.innerText === 'FrontEnd') {
                         this.projects.forEach(project => {
                             if(project.classList.contains('frontend')) {
@@ -126,6 +140,8 @@ class Main{
                                 this.events().utils.rmAddClass(project, 'filtred', true)
                                 return
                             }
+
+                            this.events().utils.rmAddClass(el, 'active', false)
                             this.events().utils.rmAddClass(project, 'filtred', false)
                             this.timeout = setTimeout(() => {
                                 this.events().utils.rmAddClass(project, 'abs', false)
@@ -142,6 +158,7 @@ class Main{
                                 this.events().utils.rmAddClass(project, 'filtred', true)
                                 return
                             }
+                            this.events().utils.rmAddClass(el, 'active', false)
                             this.events().utils.rmAddClass(project, 'filtred', false)
                             this.timeout = setTimeout(() => {
                                 this.events().utils.rmAddClass(project, 'abs', false)
@@ -158,6 +175,7 @@ class Main{
                                 this.events().utils.rmAddClass(project, 'filtred', true)
                                 return
                             }
+                            this.events().utils.rmAddClass(el, 'active', false)
                             this.events().utils.rmAddClass(project, 'filtred', false)
                             this.timeout = setTimeout(() => {
                                 this.events().utils.rmAddClass(project, 'abs', false)
@@ -167,6 +185,7 @@ class Main{
                         return
                     }
 
+                    this.events().utils.rmAddClass(el, 'active', false)
                     this.projects.forEach(project => {
                         this.events().utils.rmAddClass(project, 'abs', true)
                         this.events().utils.rmAddClass(project, 'filtred', true)

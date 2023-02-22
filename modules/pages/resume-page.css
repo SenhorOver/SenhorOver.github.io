@@ -1,6 +1,7 @@
 .resume {
     z-index: 4;
     display: flex;
+    padding: 100px 25px 0;
 }
 
 .resume ul {

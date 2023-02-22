@@ -134,4 +134,14 @@
     .about .about-infos { 
         width: 100%;
     }
+
+    .about .profile-infos li {
+        padding-right: 5px; 
+    }
+}
+
+@media (max-width: 500px) { 
+    .about .profile-infos ul{ 
+        align-items: flex-start;
+    }
 }

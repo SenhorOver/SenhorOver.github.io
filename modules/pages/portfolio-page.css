@@ -1,5 +1,6 @@
 .portfolio {
     z-index: 3;
+    padding: 100px 25px;
 }
 
 .portfolio .filter {
@@ -8,6 +9,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio .filter li {
+    margin-bottom: 15px;
 }
 
 .portfolio .filter li + li {
@@ -32,7 +38,7 @@
 }
 
 .portfolio .projects {
-    padding: 30px 0;
+    padding: 0 0 30px;
 }
 
 .portfolio .projects ul{
@@ -175,5 +181,13 @@
 
     .portfolio .projects .cover > div { 
         margin-top: 10px;
+    }
+}
+
+@media (max-width: 375px) { 
+    .portfolio .projects li { 
+        width: 100%;
+        height: auto;
+        font-size: 16px;
     }
 }

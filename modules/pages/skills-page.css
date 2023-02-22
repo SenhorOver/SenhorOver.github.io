@@ -2,6 +2,7 @@
     z-index: 5;
     display: flex;
     justify-content: center;
+    padding: 100px 25px 0;
 }
 
 .skill ul {
@@ -84,7 +85,7 @@
 @media (max-width: 768px) { 
     .skill li {
         width: 100%;
-        padding: 35px 30px;
         height: auto;
+        margin: 15px 0;
     }
 }
