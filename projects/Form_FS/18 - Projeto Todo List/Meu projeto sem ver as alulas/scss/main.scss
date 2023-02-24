@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(26, 26, 26);
+    font-family: Arial, sans-serif;
+}
+
+section{
+    max-width: 100vw;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .todoList{
+        width: 600px;
+        background-color: rgb(26, 0, 75);
+
+        .header{
+            background-color: rgb(255, 0, 85);
+            width: 100%;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            font-size: 1.2em;
+        }
+
+        .tarefas{
+            list-style: none;
+
+            li{
+                width: 100%;
+                padding: 20px 15px;
+                font-size: 1em;
+                background-color: rgb(47, 0, 134);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 2px;
+                transition-duration: 200ms;
+
+                &:hover{
+                    background-color: rgb(62, 0, 177);
+                }
+
+
+
+                & > div{
+                    color: rgb(194, 194, 194);
+                    display: flex;
+                    align-items: center;
+                    
+                    & > button{
+                        width: 20px;
+                        height: 20px;
+                        border: none;
+                        border-radius: 50%;
+                        background-color: rgb(36, 8, 73);
+                        cursor: pointer;
+                        display: inline;
+                        margin-right: 15px;
+
+                        & .verde{
+                            width: 12px;
+                            height: 12px;
+                            background-color: green;
+                            border-radius: 50%;
+                            margin: auto;
+                        }
+
+                        &:hover{
+                            background-color: rgb(156, 117, 204);
+                        }
+                    }
+
+                }
+                
+                & > button{
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    background-color: red;
+                    color: rgb(194, 194, 194);
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    transition-duration: 200ms;
+                    
+                    & > span{
+                        font-size: 9px;   
+                        font-weight: 900;
+                        width: 11px;
+                        height: 15px;
+                        border-radius: 50%;
+                        display: block;
+                    }
+
+                    &:hover{
+                        background-color: rgb(201, 0, 0);
+                    }
+                }
+
+                &:hover > button{
+                    display: flex;
+                }
+            }
+        }
+
+        .digitTarefa{
+
+            & > input{
+                width: 100%;
+                padding: 20px 15px;
+                font-size: 1.2em;
+                background-color: rgb(26, 0, 75);
+                border: none;
+                outline: none;
+                color: rgb(194, 194, 194);
+            }
+        }
+    }
+}
+
+.tarefas.menor{
+    height: 0;
+}

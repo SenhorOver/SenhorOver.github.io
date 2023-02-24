@@ -65,8 +65,12 @@
     font-weight: 400;
     letter-spacing: 0.3px;
     font-size: var(--14px-em);
-    padding-bottom: 25px;
+    padding-bottom: 5px;
     border-bottom: 1px solid #263340;
+}
+
+.about .about-infos p + p { 
+    padding-bottom: 25px;
 }
 
 .about .profile-infos ul{

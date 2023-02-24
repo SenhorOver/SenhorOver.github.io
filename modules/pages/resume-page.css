@@ -29,6 +29,10 @@
     margin: 20px 0;
 }
 
+.resume li:hover::before { 
+    background-color: var(--text-primary);
+}
+
 .resume li .cover {
     background-color: var(--light-bg-color);
 }
@@ -52,6 +56,7 @@
     transform: translateX(-50%);
     animation: pulseInfinite 1000ms infinite cubic-bezier(.66, 0, 0, 1);
     box-shadow: 0 0 0 0 var(--text-primary-anim);
+    transition: all 400ms ease-in-out;
 }
 
 .resume .cover {

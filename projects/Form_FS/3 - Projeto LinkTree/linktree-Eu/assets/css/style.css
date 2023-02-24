@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    background-color: rgb(62, 32, 192);
+    font-family: 'raleway', Arial, sans-serif
+}
+.header{
+    color: white;
+    text-align: center;
+}
+.ft-principal{
+    width: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px white;
+}
+
+h1{
+    font-family: 'Architects Daughter', cursive;
+    font-weight: 100;
+    margin: 0;
+    font-size: 22px;
+}
+h2{
+    margin: 0;
+    font-size: 15px;
+}
+
+.redes-sociais{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.icons-RS{
+    width: 30px;
+    margin-left: 9.3%;
+    margin-right: 9%;
+}
+
+.direita{
+    margin-right: 0;
+}
+
+.cursos{
+    margin-top: 20px;
+}
+.container{
+    background-color: white;
+    width: 98%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px white;
+    margin: auto;
+    margin-top: 8px;
+}
+
+a{
+    text-decoration: none;
+}
+
+h3{
+    color: rgb(0, 0, 219);
+    font-size: 16px;
+    margin: 0;
+    padding: 15px 0 0 15px;
+}
+h4{
+    margin: 0;
+    padding: 10px 0 15px 15px;
+    font-size: 13px;
+    color: rgb(110, 110, 110)
+}
+.outros{
+    margin-top: 20px;
+}
+.container-outros{
+    background-color: white;
+    border-radius: 8px;
+    width: 98%;
+    margin:auto;
+    margin-bottom: 8px;
+}

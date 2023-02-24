@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+:root{
+    --primary-color: #917758;
+    --secondary-color: #3c2915;
+    --light-primary-color: #f5eee6;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+/* ************
+HOME 
+************ */
+
+.home{
+    position: relative;
+    background-image: url(../img/bg-home.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+.home .header{
+    padding: 30px 0;
+
+}
+.home .header .nav{
+    display:flex;
+    justify-content: center;    
+}
+
+.home .header .nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.home .header .nav ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    
+}
+
+.home .header .nav ul li a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 20px;
+}
+
+
+
+.home .header .nav ul li a:hover{
+    border-bottom: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.home .header .nav ul li .logo{
+    margin: 0 30px;
+}
+
+
+
+/* ************
+HOME - BANNER
+************ */
+
+.home .banner{
+    color: white;
+    text-align: center; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 270px;
+    width: 770px;
+    margin-left: -385px;
+    margin-top: -75px;
+}
+
+.home .banner span{
+    display: block;
+}
+
+.home .banner span:first-child{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+.home .banner h1{
+    font-size: 120px;
+}
+
+.home .banner span:nth-child(3){
+    margin-bottom: 15px;
+}
+
+
+
+
+/* ************
+ABOUT
+************ */
+
+.about{
+    background-color: var(--primary-color);
+}
+
+.about .container{
+    display: flex;
+}
+
+.about .timing{
+    width: 33%;
+    background-image: url(../img/brush-big.jpg);
+    padding: 20px;
+    position: relative;
+    top: -50px;
+}
+
+.about .timing .overlay{
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about .timing .overlay img:first-child{
+    width: 50px;
+}
+
+.about .timing h3{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--primary-color);
+    width: fit-content; /* Para a border não ocupar o overlay todo, somente o conteúdo dentro */
+    margin: 0 auto 30px auto;
+    font-size: 30px;
+}
+
+.about .timing .text{
+    margin: 10px 0;
+}
+.about .timing .text::after{
+    content: '•';
+    font-size: 25px;
+    color: white;
+    display: block;
+    margin-top: 10px;
+}
+
+.about .timing .text:last-of-type::after{
+    content: '|';
+}
+.about .timing .text h4{
+    color: grey;
+    font-weight: 400;
+    font-size: 15px;
+}
+.about .timing span{
+    color: white;
+    font-size: 15px;
+    display: block;
+}
+
+
+
+.about .experience{
+    width: 66%;
+    color: white;
+    margin-left: 7%;
+    margin-top: 100px;
+}
+
+.about .experience h2{
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.about .experience h2::after{
+    display: block;
+    content: '';
+    width: 100px;
+    height: 3px;
+    background-color: #a38f78;
+    margin: 20px 0;
+}
+
+
+.about .experience .text{
+    display: flex;
+    justify-content: space-between; 
+}
+
+
+
+.about .experience .text p{
+    margin-bottom: 20px;
+    font-weight: 100;
+    font-size: 17px;
+}
+
+
+
+/* ************
+Services
+************ */
+
+.services{
+    padding: 100px 0;
+    text-align: center;
+    background-color: var(--light-primary-color);
+}
+
+.services h2{
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.services .boxes{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.services .boxes .box{
+    border: 3px solid var(--primary-color);
+    padding: 50px 40px;
+    margin: 30px;
+}
+
+.services .boxes .box h4{
+    color: var(--secondary-color);
+    margin-top: 30px;
+}
+
+.services .boxes .box p{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+
+
+
+/* ************
+Appointment
+************ */
+
+
+.appointment{
+    padding: 100px 0;
+    background-color: var(--primary-color);
+    height: 100vh;
+    background-image: url(../img/chair-ic.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 300px;
+}
+
+.appointment h2{
+    color: var(--light-primary-color);
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.appointment img{
+    margin: 0 auto;
+    display: block;
+}
+.appointment form{
+    margin-top: 80px;
+}
+.appointment .personal-data{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.appointment .input-wrapper{
+    width: 100%;
+    margin-right: 50px;
+}
+.appointment .input-wrapper:last-of-type{
+    margin-right: 0;
+}
+.appointment label{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: var(--light-primary-color);
+}
+
+.appointment .personal-data input, .appointment .personal-data select, .appointment textarea{
+    padding: 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.appointment textarea{
+    height: 100px;
+}
+
+.appointment button{
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+
+/* ************
+Gallery
+************ */
+
+
+.gallery{
+    padding: 100px 0;
+    background-color: var(--light-primary-color);
+}
+
+.gallery h2{
+    color: var(--secondary-color);
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.gallery img{
+    margin: 0 auto;
+    display: block;
+}
+
+.gallery .gallery-wrapper{
+    margin: 50px auto;
+    display: flex;
+    height: 100vh;
+    width: 900px;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.gallery .gallery-wrapper div{
+    border: 10px solid var(--primary-color);
+    margin: 6px;
+    width: 33%;
+}
+
+.gallery .gallery-wrapper div img{
+    width: 100%;
+    border: 0;
+}
+
+
+
+
+/* ************
+Location
+************ */
+
+.location{
+    padding: 100px 0;
+    background-image: url(../img/bg-location.jpg);
+    background-size: cover;
+}
+
+.location .head{
+    display: flex;
+    justify-content: space-between;
+    background-color: #191919;
+    padding: 40px;
+    width: 100%;
+}
+
+.location .head .info{
+    display: flex;
+    align-items: center;
+}
+
+.location .head .info .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.location .head .info .text span{
+    display: block;
+    font-size: 13px;
+}
+
+.location .head .info .text span:first-child{
+    color: silver;
+}
+
+.location .head .info .text span:last-child{
+    color: white;
+}
+
+.location .map{
+    width: 100%;
+}
+
+.location .map iframe{
+    width: 100%;
+}
+
+
+
+
+
+/* ************
+Footer
+************ */
+
+.footer{
+    background-color: #191919;
+    color: white;
+    padding: 40px;
+    font-size: 12px;
+    text-align: center;
+}
