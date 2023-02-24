@@ -9,10 +9,10 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 1000;
 }
 
-.header nav {
+.header nav.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +52,11 @@
     cursor: pointer;
 }
 
-.header div.menu-toggle::before {
+.header div.menu-toggle.above-side {
+    z-index: 10000000;
+}
+
+.header div.menu-toggle div.menu-ham0 {
     content: '';
     position: absolute;
     top: 0;
@@ -62,9 +66,14 @@
     height: 2px;
     font-size: 1.5em;
     background-color: var(--text-primary);
+    transition: all 400ms ease-in-out;
 }
 
-.header div.menu-toggle::after {
+.header div.menu-toggle div.menu-ham0.Xrotate { 
+    transform: rotateZ(45deg) translate(6px, 7px);
+}
+
+.header div.menu-toggle div.menu-ham1{
     content: '';
     position: absolute;
     bottom: 0;
@@ -74,6 +83,12 @@
     width: 55%;
     height: 2px;
     background-color: var(--text-primary);
+    transition: all 400ms ease-in-out;
+}
+
+.header div.menu-toggle div.menu-ham1.Xrotate1 { 
+    width: 100%;
+    transform: rotateZ(-45deg) translate(3px, -4px);
 }
 
 .header div.menu-toggle div.menu-ham {
@@ -85,8 +100,13 @@
     width: 80%;
     height: 2px;
     background-color: var(--text-primary);
+    transition: all 400ms ease-in-out;
 }
 
+.header div.menu-toggle div.menu-ham.hidden { 
+    opacity: 0;
+    right: -3px;
+}
 @media (max-width: 1000px) {
     header .container {
         width: 100%;

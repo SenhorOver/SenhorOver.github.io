@@ -1,5 +1,9 @@
 class Main{
     constructor() {
+        // HEADER + NAVBAR
+        this.activeNav = false
+        this.sideNav = document.querySelector('.side-menu')
+
         // HOME PAGE
         this.homeWords = ['FrontEnd.', 'Backend.', 'FullStack.']
         this.arrIndex = 0
@@ -7,7 +11,7 @@ class Main{
 
 
         // NAVBAR PAGES
-        this.pageNames = ['Home', 'Sobre', 'Habilidades', 'Experiência', 'Portfólio', 'Contato']
+        this.pageNames = ['home', 'about', 'skills', 'resume', 'portfolio', 'contact']
         this.pages = document.querySelectorAll('.content')
 
 
@@ -22,8 +26,13 @@ class Main{
     }
 
     cacheSelectors() {
-        // HEADER + NAVBAR
+        // BODY
+        this.body = document.querySelector('body')
 
+        // HEADER + NAVBAR
+        this.menu = document.querySelector('.menu-toggle')
+        this.sideBtnNavbar = document.querySelectorAll('.pages')
+        this.mainTitle = document.querySelector('.main-title')
 
         // HOME PAGE
         this.writingText = document.querySelector('#writing-text');
@@ -33,8 +42,6 @@ class Main{
         // NAVBAR PAGES
         this.btnNavbar = document.querySelectorAll('.nav-button');
 
-
-
         // LIST PROJECTS
         this.btnFilter = document.querySelectorAll('.btn-filter')
 
@@ -43,23 +50,55 @@ class Main{
     }
 
     bindEvents() {
-         this.events().home.writing()
+        this.body.onload = this.events().utils.body_Load
 
-         this.homeBtnContact.onclick = this.events().navbarPages.btn_Click
+        this.menu.onclick = this.events().header.menuToggle_Click
 
-         this.btnNavbar.forEach(button => {
+        this.events().home.writing()
+
+        this.homeBtnContact.onclick = this.events().navbarPages.btn_Click
+
+        this.mainTitle.onclick = this.events().navbarPages.btn_Click
+
+        this.btnNavbar.forEach(button => {
             button.onclick = this.events().navbarPages.btn_Click
-         })
+        })
 
-         this.btnFilter.forEach(button => {
+        this.sideBtnNavbar.forEach(button => {
+            button.onclick = this.events().navbarPages.btn_Click
+        })
+
+        this.btnFilter.forEach(button => {
             button.onclick = this.events().listProjects.btnFilter_Click
-         })
+        })
 
-         this.form.onsubmit = this.events().contactForm.form_Submit
+        this.form.onsubmit = this.events().contactForm.form_Submit
     }
 
     events() {
         return {
+            header: {
+                menuToggle_Click: (e) => {
+                    const el = e.currentTarget
+                    const [ham0, ham, ham1] = el.children
+                    if(this.activeNav) {
+                        this.events().utils.rmAddClass(ham, 'hidden', true)
+                        this.events().utils.rmAddClass(ham0, 'Xrotate', true)
+                        this.events().utils.rmAddClass(ham1, 'Xrotate1', true)
+                        this.events().utils.rmAddClass(el, 'above-side', true)
+                        this.events().utils.rmAddClass(this.sideNav, 'sideAnim', true)
+                        this.activeNav = false
+                        return
+                    }
+                    this.events().utils.rmAddClass(ham, 'hidden', false)
+                    this.events().utils.rmAddClass(ham0, 'Xrotate', false)
+                    this.events().utils.rmAddClass(ham1, 'Xrotate1', false)
+                    this.events().utils.rmAddClass(el, 'above-side', false)
+                    this.events().utils.rmAddClass(this.sideNav, 'sideAnim', false)
+                    this.activeNav = true
+                }
+            },
+
             home: {
                 writing: () => {
                     clearInterval(this.textInterval)
@@ -103,18 +142,27 @@ class Main{
             navbarPages: {
                 btn_Click: (e) => {
                     const el = e.target
-                    if(el.localName !== 'span' && !el.classList.contains('contact-navbar')) return
+                    const data = el.dataset
+                    let page = null
+                    for(let i in data) {
+                        page = i
+                    }
+                    if(!page) return
                     if(el.classList.contains('btn-active')) return
+                    
+                    const indexPage = this.pageNames.indexOf(page)
                     
                     this.btnNavbar.forEach((button, index) => {
                         const span = button.firstElementChild.firstElementChild
+                        if(index === indexPage) return this.events().utils.rmAddClass(span, 'btn-active', false)
                         if(span.classList.contains('btn-active')) return this.events().utils.rmAddClass(span, 'btn-active', true)
-                        if(index === 5 && el.classList.contains('contact-navbar')) this.events().utils.rmAddClass(span, 'btn-active', false)
                     })
-                    !el.classList.contains('contact-navbar') ? el.classList.add('btn-active') : null
-                    
-                    let pageText = !el.classList.contains('contact-navbar') ? el.parentElement.nextElementSibling.innerHTML : 'Contato'
-                    const indexPage = this.pageNames.indexOf(pageText)
+
+                    this.sideBtnNavbar.forEach((button, index) => {
+                        const a = button.firstElementChild
+                        if(index - 1 === indexPage) return this.events().utils.rmAddClass(a, 'btn-active', false)
+                        if(a.classList.contains('btn-active')) return this.events().utils.rmAddClass(a, 'btn-active', true)
+                    })                
                     this.pages.forEach((page, index) => {
                         if(index < indexPage) {
                             this.events().utils.rmAddClass(page, 'page-up', false)
@@ -215,6 +263,15 @@ class Main{
                 rmAddClass: (el, className, rm) => {
                     if(rm) return el.classList.remove(className)
                     el.classList.add(className)
+                },
+
+                body_Load: () => {
+                    const pages = document.querySelectorAll('.pages-default')
+                    pages.forEach(page => {
+                        page.classList.remove('none')
+                    })
+                    this.cacheSelectors()
+                    this.bindEvents()
                 }
             }
 

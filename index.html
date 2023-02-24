@@ -14,10 +14,57 @@
     -->
     <header class="header">
         <nav class="container">
-            <h2 class="main-title"><a href="#">Marcos</a></h2>
+            <h2 class="main-title"><a href="#" data-home="Home">Marcos</a></h2>
             <div class="menu-toggle">
+                <div class="menu-ham0"></div>
                 <div class="menu-ham"></div>
+                <div class="menu-ham1"></div>
             </div>
+        </nav>
+        <nav class="side-menu">
+            <ul class="side-cover">
+                <li class="side-title pages">
+                    <a href="#">
+                        <h2 class="main-title" data-home="Home">Marcos</h2>
+                    </a>
+                </li>
+                <li class="pages">
+                    <a href="#" class="btn-active" data-home="Home">
+                        <i class="fa fa-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li class="pages">
+                    <a href="#" data-about="Sobre">
+                        <i class="fa fa-user"></i>
+                        Sobre
+                    </a>
+                </li>
+                <li class="pages">
+                    <a href="#" data-skills="Habilidades">
+                        <i class="fa-solid fa-book"></i>
+                        Habilidades
+                    </a>
+                </li>
+                <li class="pages">
+                    <a href="#" data-resume="Experiência">
+                        <i class="fa fa-graduation-cap"></i>
+                        Experiência
+                    </a>
+                </li>
+                <li class="pages">
+                    <a href="#" data-portfolio="Portfólio">
+                        <i class="fa fa-briefcase"></i>
+                        Portfólio
+                    </a>
+                </li>
+                <li class="pages">
+                    <a href="#" data-contact="Contato">
+                        <i class="fa fa-map-marker"></i>
+                        Contato
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
 
@@ -45,7 +92,7 @@
             <p>Sou um Desenvolvedor <span id="writing-text"></span></p>
             <div class="buttons">
                 <a href="#">
-                    <button class="contact-navbar">Contato</button>
+                    <button class="contact-navbar" data-contact="Contato">Contato</button>
                 </a>
                 <a href="#">
                     <button>Currículo</button>
@@ -57,7 +104,7 @@
     <!--
         ABOUT
     -->
-    <section class="pages-default content about">
+    <section class="pages-default content about none">
         <div class="container">
             <div class="profile-photo">
                 <div class="profile-photo-cover">
@@ -130,7 +177,7 @@
     <!--
         SKILLS
     -->
-    <section class="pages-default content skill">
+    <section class="pages-default content skill none">
         <div class="container">
             <h2 class="title">Minhas HABILIDADES</h2>
             <div class="skills-card">
@@ -199,7 +246,7 @@
     <!--
         RESUME
     -->
-    <section class="pages-default content resume">
+    <section class="pages-default content resume none">
         <div class="container">
             <h2 class="title">EXPERIÊNCIA</h2>
             <ul class="timeline">
@@ -255,7 +302,7 @@
     <!--
         PORTFOLIO
     -->
-    <section class="pages-default content portfolio">
+    <section class="pages-default content portfolio none">
         <div class="container">
             <h2 class="title">PORTFÓLIO</h2>
             <div class="portfolio-content">
@@ -403,7 +450,7 @@
     <!--
         CONTACT
     -->
-    <section class="pages-default content contact">
+    <section class="pages-default content contact none">
         <div class="container">
             <h2 class="title">CONTATO</h2>
             <div class="contact-content">
@@ -477,37 +524,37 @@
         <ul>
             <li class="nav-button">
                 <a href="#">
-                    <span class="btn-active"></span>
+                    <span class="btn-active" data-home="Home"></span>
                 </a>
                 <div>Home</div>
             </li>
             <li class="nav-button">
                 <a href="#">
-                    <span></span>
+                    <span data-about="Sobre"></span>
                 </a>
                 <div>Sobre</div>
             </li>
             <li class="nav-button">
                 <a href="#">
-                    <span></span>
+                    <span data-skills="Habilidades"></span>
                 </a>
                 <div>Habilidades</div>
             </li>
             <li class="nav-button">
                 <a href="#">
-                    <span></span>
+                    <span data-resume="Experiência"></span>
                 </a>
                 <div>Experiência</div>
             </li>
             <li class="nav-button">
                 <a href="#">
-                    <span></span>
+                    <span data-portfolio="Portfólio"></span>
                 </a>
                 <div>Portfólio</div>
             </li>
             <li class="nav-button">
                 <a href="#">
-                    <span></span>
+                    <span data-contact="Contato"></span>
                 </a>
                 <div>Contato</div>
             </li>

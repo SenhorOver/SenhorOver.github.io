@@ -2,6 +2,7 @@
 
 /* Header */
 @import 'modules/header.css';
+@import 'modules/side-menu.css';
 
 /* NavBar */
 @import 'modules/navbar-pages.css';

@@ -111,6 +111,10 @@ h1 {
     overflow-y: scroll;
 }
 
+.pages-default.none {
+    display: none;
+}
+
 .page-up {
     transform: translateY(-100%);
 }
