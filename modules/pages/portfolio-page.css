@@ -1,6 +1,5 @@
 .portfolio {
-    z-index: 3;
-    padding: 100px 25px;
+    z-index: 8;
 }
 
 .portfolio .filter {
@@ -124,6 +123,7 @@
     font-weight: 400;
     transition: all 200ms ease-in-out;
     transition-delay: 125ms;
+    text-align: center;
 }
 
 .portfolio .projects .cover p {
@@ -150,7 +150,6 @@
 .portfolio .projects .cover a + a {
     margin-left: 10px;
 }
-
 
 @media (max-width: 1200px) {
     .portfolio .projects ul{ 
@@ -181,6 +180,13 @@
 
     .portfolio .projects .cover > div { 
         margin-top: 10px;
+    }
+}
+
+
+@media (max-width: 575px) { 
+    .portfolio {
+        padding: 100px 25px;
     }
 }
 

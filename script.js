@@ -5,7 +5,7 @@ class Main{
         this.sideNav = document.querySelector('.side-menu')
 
         // HOME PAGE
-        this.homeWords = ['FrontEnd.', 'Backend.', 'FullStack.']
+        this.homeWords = ['Frontend.', 'Backend.', 'FullStack.']
         this.arrIndex = 0
         this.textInterval = null
 
@@ -33,6 +33,7 @@ class Main{
         this.menu = document.querySelector('.menu-toggle')
         this.sideBtnNavbar = document.querySelectorAll('.pages')
         this.mainTitle = document.querySelector('.main-title')
+        this.sideMenu = document.querySelector('.side-menu')
 
         // HOME PAGE
         this.writingText = document.querySelector('#writing-text');
@@ -56,6 +57,8 @@ class Main{
 
         this.events().home.writing()
 
+        this.sideMenu.onclick = this.events().header.sideBarOutside_Click
+
         this.homeBtnContact.onclick = this.events().navbarPages.btn_Click
 
         this.mainTitle.onclick = this.events().navbarPages.btn_Click
@@ -78,8 +81,8 @@ class Main{
     events() {
         return {
             header: {
-                menuToggle_Click: (e) => {
-                    const el = e.currentTarget
+                menuToggle_Click: (e, menu) => {
+                    const el = menu ? menu : e.currentTarget
                     const [ham0, ham, ham1] = el.children
                     if(this.activeNav) {
                         this.events().utils.rmAddClass(ham, 'hidden', true)
@@ -96,6 +99,12 @@ class Main{
                     this.events().utils.rmAddClass(el, 'above-side', false)
                     this.events().utils.rmAddClass(this.sideNav, 'sideAnim', false)
                     this.activeNav = true
+                },
+
+                sideBarOutside_Click: (e) => {
+                    if(!e.target.classList.contains('side-menu') || !this.activeNav) return
+                    this.events().header.menuToggle_Click(e, this.menu)
+                    this.activeNav = false
                 }
             },
 
@@ -172,7 +181,7 @@ class Main{
                             this.events().utils.rmAddClass(page, 'page-up', true)
                         }
                     })
-                }
+                },
             },
 
             listProjects: {
@@ -181,7 +190,7 @@ class Main{
                     const el = e.target
                     this.btnFilter.forEach(btn => this.events().utils.rmAddClass(btn, 'active', true))
 
-                    if(el.innerText === 'FrontEnd') {
+                    if(el.innerText === 'Frontend') {
                         this.projects.forEach(project => {
                             if(project.classList.contains('frontend')) {
                                 this.events().utils.rmAddClass(project, 'abs', true)
@@ -199,7 +208,7 @@ class Main{
                         return
                     }
 
-                    if(el.innerText === 'BackEnd') {
+                    if(el.innerText === 'Backend') {
                         this.projects.forEach(project => {
                             if(project.classList.contains('backend')) {
                                 this.events().utils.rmAddClass(project, 'abs', true)
