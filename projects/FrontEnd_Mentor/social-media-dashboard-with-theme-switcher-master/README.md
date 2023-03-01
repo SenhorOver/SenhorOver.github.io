@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/social-media-dashboard-with-theme-switcher-with-html-scss-and-js-6IMsDk0hHd](https://www.frontendmentor.io/solutions/social-media-dashboard-with-theme-switcher-with-html-scss-and-js-6IMsDk0hHd)
-- Live Site URL: [https://senhorover.github.io/social-media-dashboard-with-theme-switcher-master/index.html](https://senhorover.github.io/social-media-dashboard-with-theme-switcher-master/index.html)
+- Live Site URL: [https://senhorover.github.io/projects/FrontEnd_Mentor/social-media-dashboard-with-theme-switcher-master/](https://senhorover.github.io/projects/FrontEnd_Mentor/social-media-dashboard-with-theme-switcher-master/)
 
 ## My process
 

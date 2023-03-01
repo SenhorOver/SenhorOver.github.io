@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://senhorover.github.io/intro-section-with-dropdown-navigation-main/index.html](https://senhorover.github.io/intro-section-with-dropdown-navigation-main/index.html)
+- Solution URL: [https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-with-html-scss-and-js-5jdrvBtO-e](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-with-html-scss-and-js-5jdrvBtO-e)
+- Live Site URL: [https://senhorover.github.io/projects/FrontEnd_Mentor/intro-section-with-dropdown-navigation-main/index.html](https://senhorover.github.io/projects/FrontEnd_Mentor/intro-section-with-dropdown-navigation-main/index.html)
 
 ## My process
 

@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/interactive-rating-component-with-html-scss-and-js-X_xR3cBXpz](https://www.frontendmentor.io/solutions/interactive-rating-component-with-html-scss-and-js-X_xR3cBXpz)
-- Live Site URL: [https://senhorover.github.io/interactive-rating-component-main/index.html](https://senhorover.github.io/interactive-rating-component-main/index.html)
+- Live Site URL: [https://senhorover.github.io/projects/FrontEnd_Mentor/interactive-rating-component-main/index.html](https://senhorover.github.io/projects/FrontEnd_Mentor/interactive-rating-component-main/index.html)
 
 ## My process
 
