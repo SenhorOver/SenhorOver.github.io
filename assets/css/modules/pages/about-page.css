@@ -8,6 +8,10 @@
     display: flex;
 }
 
+.about .infos > a { 
+    text-decoration: none;
+}
+
 .about .profile-photo {
     width: 450px;
     height: 550px;

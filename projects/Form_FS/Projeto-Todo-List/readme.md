@@ -1,6 +1,6 @@
 # Lista de Tarefas
 
-![Preview Todo List](../../../imgs/github-imgs/todo-list.PNG)
+![Preview Todo List](../../../assets/imgs/github-imgs/todo-list.PNG)
 
 ## Table of contents
 

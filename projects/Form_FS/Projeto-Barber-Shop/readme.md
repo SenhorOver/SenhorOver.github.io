@@ -1,6 +1,6 @@
 # Barber Shop
 
-![Preview Barber Shop](../../../imgs/github-imgs/barber-shop.PNG)
+![Preview Barber Shop](../../../assets/imgs/github-imgs/barber-shop.PNG)
 
 ## Table of contents
 

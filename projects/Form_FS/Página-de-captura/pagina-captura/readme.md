@@ -1,6 +1,6 @@
 # Página de Captura
 
-![Preview Pagina de Captura](../../../../imgs/github-imgs/pagina-captura.PNG)
+![Preview Pagina de Captura](../../../../assets/imgs/github-imgs/pagina-captura.PNG)
 
 ## Table of contents
 

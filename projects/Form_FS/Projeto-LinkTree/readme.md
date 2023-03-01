@@ -1,6 +1,6 @@
 # Projeto LinkTree
 
-![Preview LinkTree](../../../imgs/github-imgs/linktree.PNG)
+![Preview LinkTree](../../../assets/imgs/github-imgs/linktree.PNG)
 
 ## Table of contents
 
