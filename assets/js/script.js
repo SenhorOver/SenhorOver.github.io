@@ -1,4 +1,4 @@
-class Main{
+class Main {
     constructor() {
         // HEADER + NAVBAR
         this.activeNav = false
@@ -50,6 +50,7 @@ class Main{
         this.form = document.querySelector('form')
     }
 
+    // Função para adicionar todos os eventos javascript nas suas respectivas tags
     bindEvents() {
         this.body.onload = this.events().utils.body_Load
 
@@ -78,13 +79,15 @@ class Main{
         this.form.onsubmit = this.events().contactForm.form_Submit
     }
 
+
+    // Eventos separados por seção
     events() {
         return {
             header: {
                 menuToggle_Click: (e, menu) => {
                     const el = menu ? menu : e.currentTarget
                     const [ham0, ham, ham1] = el.children
-                    if(this.activeNav) {
+                    if (this.activeNav) {
                         this.events().utils.rmAddClass(ham, 'hidden', true)
                         this.events().utils.rmAddClass(ham0, 'Xrotate', true)
                         this.events().utils.rmAddClass(ham1, 'Xrotate1', true)
@@ -102,7 +105,7 @@ class Main{
                 },
 
                 sideBarOutside_Click: (e) => {
-                    if(!e.target.classList.contains('side-menu') || !this.activeNav) return
+                    if (!e.target.classList.contains('side-menu') || !this.activeNav) return
                     this.events().header.menuToggle_Click(e, this.menu)
                     this.activeNav = false
                 }
@@ -113,13 +116,13 @@ class Main{
                     clearInterval(this.textInterval)
                     let index = 0
                     this.textInterval = setInterval(() => {
-                        if(this.homeWords[this.arrIndex][index]) {
+                        if (this.homeWords[this.arrIndex][index]) {
                             this.writingText.innerText += this.homeWords[this.arrIndex][index]
                             return index++
-                        } 
-                        
+                        }
+
                         this.arrIndex++
-                        if(this.arrIndex > 2) this.arrIndex = 0;
+                        if (this.arrIndex > 2) this.arrIndex = 0;
                         this.events().home.deleting()
                     }, 150)
                 },
@@ -131,10 +134,10 @@ class Main{
                         this.textInterval = setInterval(() => {
                             this.writingText.innerText = this.writingText.innerText.slice(0, index)
                             index--
-                            if(index < 0) {
+                            if (index < 0) {
                                 this.events().home.writing()
                             }
-                        },70)
+                        }, 70)
                     }, 400)
                 },
 
@@ -142,8 +145,8 @@ class Main{
                     e.preventDefault()
                     this.btnNavbar.forEach((button, index) => {
                         const span = button.firstElementChild.firstElementChild
-                        if(span.classList.contains('btn-active')) return this.events().utils.rmAddClass(span, 'btn-active', true)
-                        if(index === 5) this.events().utils.rmAddClass(span, 'btn-active', false)
+                        if (span.classList.contains('btn-active')) return this.events().utils.rmAddClass(span, 'btn-active', true)
+                        if (index === 5) this.events().utils.rmAddClass(span, 'btn-active', false)
                     })
                 }
             },
@@ -153,31 +156,31 @@ class Main{
                     const el = e.target
                     const data = el.dataset
                     let page = null
-                    for(let i in data) {
+                    for (let i in data) {
                         page = i
                     }
-                    if(!page) return
-                    if(el.classList.contains('btn-active')) return
-                    
+                    if (!page) return
+                    if (el.classList.contains('btn-active')) return
+
                     const indexPage = this.pageNames.indexOf(page)
-                    
+
                     this.btnNavbar.forEach((button, index) => {
                         const span = button.firstElementChild.firstElementChild
-                        if(index === indexPage) return this.events().utils.rmAddClass(span, 'btn-active', false)
-                        if(span.classList.contains('btn-active')) return this.events().utils.rmAddClass(span, 'btn-active', true)
+                        if (index === indexPage) return this.events().utils.rmAddClass(span, 'btn-active', false)
+                        if (span.classList.contains('btn-active')) return this.events().utils.rmAddClass(span, 'btn-active', true)
                     })
 
                     this.sideBtnNavbar.forEach((button, index) => {
                         const a = button.firstElementChild
-                        if(index - 1 === indexPage) return this.events().utils.rmAddClass(a, 'btn-active', false)
-                        if(a.classList.contains('btn-active')) return this.events().utils.rmAddClass(a, 'btn-active', true)
-                    })                
+                        if (index - 1 === indexPage) return this.events().utils.rmAddClass(a, 'btn-active', false)
+                        if (a.classList.contains('btn-active')) return this.events().utils.rmAddClass(a, 'btn-active', true)
+                    })
                     this.pages.forEach((page, index) => {
-                        if(index < indexPage) {
+                        if (index < indexPage) {
                             this.events().utils.rmAddClass(page, 'page-up', false)
                         }
 
-                        if(index >= indexPage) {
+                        if (index >= indexPage) {
                             this.events().utils.rmAddClass(page, 'page-up', true)
                         }
                     })
@@ -186,13 +189,13 @@ class Main{
 
             listProjects: {
                 btnFilter_Click: (e) => {
-                    if(this.timeout) return
+                    if (this.timeout) return
                     const el = e.target
                     this.btnFilter.forEach(btn => this.events().utils.rmAddClass(btn, 'active', true))
 
-                    if(el.innerText === 'Frontend') {
+                    if (el.innerText === 'Frontend') {
                         this.projects.forEach(project => {
-                            if(project.classList.contains('frontend')) {
+                            if (project.classList.contains('frontend')) {
                                 this.events().utils.rmAddClass(project, 'abs', true)
                                 this.events().utils.rmAddClass(project, 'filtred', true)
                                 return
@@ -208,9 +211,9 @@ class Main{
                         return
                     }
 
-                    if(el.innerText === 'Backend') {
+                    if (el.innerText === 'Backend') {
                         this.projects.forEach(project => {
-                            if(project.classList.contains('backend')) {
+                            if (project.classList.contains('backend')) {
                                 this.events().utils.rmAddClass(project, 'abs', true)
                                 this.events().utils.rmAddClass(project, 'filtred', true)
                                 return
@@ -225,9 +228,9 @@ class Main{
                         return
                     }
 
-                    if(el.innerText === 'Destaques') {
+                    if (el.innerText === 'Destaques') {
                         this.projects.forEach(project => {
-                            if(project.classList.contains('featured')) {
+                            if (project.classList.contains('featured')) {
                                 this.events().utils.rmAddClass(project, 'abs', true)
                                 this.events().utils.rmAddClass(project, 'filtred', true)
                                 return
@@ -258,19 +261,29 @@ class Main{
                     const subject = this.form['subject']
                     const body = this.form['body']
 
-                    function mailto() {
-                        window.location.href = `mailto:mrcsvs@outlook.com?body=${body.value}&subject=${subject.value}&email=${email.value}`
+                    if (!email.value || !subject.value || !body.value) {
+                        alert("Por favor, preencha os campos necessários: Email, Assunto e Mensagem !!!")
+                        return
                     }
 
-                    mailto()
+                    // function mailto() {
+                    //     window.location.href = `mailto:mrcsvs@outlook.com?body=${body.value}&subject=${subject.value}&email=${email.value}`
+                    // }
+
+                    // mailto()
+
+                    alert("Email enviado com sucesso!")
+                    this.form['email'].value = ""
+                    this.form['subject'].value = ""
+                    this.form['body'].value = ""
                 }
             },
 
 
-
+            // Utilitários que são repitidos em momentos diferentes do código javascript
             utils: {
                 rmAddClass: (el, className, rm) => {
-                    if(rm) return el.classList.remove(className)
+                    if (rm) return el.classList.remove(className)
                     el.classList.add(className)
                 },
 

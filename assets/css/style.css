@@ -1,20 +1,21 @@
-@import 'modules/defaults.css';
+/* Arquivos CSS Separados para melhor organização */
+
+@import "modules/defaults.css";
 
 /* Header */
-@import 'modules/header.css';
-@import 'modules/side-menu.css';
+@import "modules/header.css";
+@import "modules/side-menu.css";
 
 /* NavBar */
-@import 'modules/navbar-pages.css';
+@import "modules/navbar-pages.css";
 
 /* Pages */
-@import 'modules/pages/home-page.css';
-@import 'modules/pages/about-page.css';
-@import 'modules/pages/skills-page.css';
-@import 'modules/pages/resume-page.css';
-@import 'modules/pages/portfolio-page.css';
-@import 'modules/pages/contact-page.css';
+@import "modules/pages/home-page.css";
+@import "modules/pages/about-page.css";
+@import "modules/pages/skills-page.css";
+@import "modules/pages/resume-page.css";
+@import "modules/pages/portfolio-page.css";
+@import "modules/pages/contact-page.css";
 
 /* Animations */
-@import 'modules/animations.css'
-
+@import "modules/animations.css";
